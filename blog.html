@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog articles, tips, and resources for TikTok creators. Learn content strategy, growth tactics, and monetization tips.">
+    <meta name="keywords" content="creator blog, TikTok tips, content strategy, creator resources, social media growth">
+    <title>Blog - Quickers Creator Network</title>
+    
+    <meta property="og:title" content="Blog - Quickers Creator Network">
+    <meta property="og:description" content="Tips, strategies, and resources for TikTok creators.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=1200">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        /* ============================================
+           GLITCHY FONT STYLES
+           ============================================ */
+        .glitch-text {
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .glitch-text::before {
+            animation: glitch-before 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+            color: var(--primary);
+        }
+        
+        .glitch-text::after {
+            animation: glitch-after 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+            color: var(--secondary);
+        }
+        
+        @keyframes glitch-before {
+            0% { transform: translate(0); opacity: 0.8; }
+            20% { transform: translate(-2px, 1px); opacity: 1; }
+            40% { transform: translate(2px, -1px); opacity: 0.6; }
+            60% { transform: translate(-1px, 2px); opacity: 0.9; }
+            80% { transform: translate(1px, -2px); opacity: 0.7; }
+            100% { transform: translate(0); opacity: 0.8; }
+        }
+        
+        @keyframes glitch-after {
+            0% { transform: translate(0); opacity: 0.6; }
+            20% { transform: translate(1px, -1px); opacity: 1; }
+            40% { transform: translate(-1px, 2px); opacity: 0.5; }
+            60% { transform: translate(2px, 1px); opacity: 0.8; }
+            80% { transform: translate(-2px, -1px); opacity: 0.6; }
+            100% { transform: translate(0); opacity: 0.6; }
+        }
+
+        /* ============================================
+           BLOG HERO
+           ============================================ */
+        .blog-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1.5rem;
+            position: relative;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 50%, #0A0A0F 100%);
+            overflow: hidden;
+        }
+
+        .blog-hero .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.12;
+        }
+
+        .blog-hero .hero-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 10s ease-in-out infinite;
+        }
+
+        .blog-hero .hero-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 10s ease-in-out infinite 3s;
+        }
+
+        .blog-hero .hero-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 10s ease-in-out infinite 6s;
+        }
+
+        .blog-hero .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .blog-hero .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-hero .hero-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .blog-hero .hero-title .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .blog-hero .hero-subtitle {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           BLOG FILTER SECTION
+           ============================================ */
+        .blog-filter-wrap {
+            padding: 2rem 0;
+            background: rgba(10, 10, 15, 0.5);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 70px;
+            z-index: 50;
+        }
+
+        .blog-filter-wrap .filter-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blog-filter-wrap .search-wrapper {
+            flex: 1;
+            min-width: 200px;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .blog-filter-wrap .search-wrapper input {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .blog-filter-wrap .search-wrapper input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-filter-wrap .search-wrapper input:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .blog-filter-wrap .search-wrapper .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-filter-wrap select {
+            padding: 0.7rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.3)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
+        }
+
+        .blog-filter-wrap select:focus {
+            border-color: var(--primary);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .blog-filter-wrap select option {
+            background: #14141E;
+            color: #FFFFFF;
+        }
+
+        .blog-filter-wrap .result-count {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+            padding: 0.3rem 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* ============================================
+           BLOG GRID SECTION
+           ============================================ */
+        .blog-grid-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A0F 0%, #14141E 50%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-grid-wrap .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .blog-grid-wrap .bg-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 1s;
+        }
+
+        .blog-grid-wrap .bg-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 4s;
+        }
+
+        .blog-grid-wrap .bg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-grid-wrap .blog-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .blog-grid-wrap .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+        }
+
+        .blog-grid-wrap .blog-card:hover::before {
+            opacity: 1;
+        }
+
+        .blog-grid-wrap .blog-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-grid-wrap .blog-card .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .blog-grid-wrap .blog-card:hover .card-image {
+            transform: scale(1.02);
+        }
+
+        .blog-grid-wrap .blog-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta .tag {
+            padding: 0.2rem 0.7rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta .tag.primary {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta .tag.secondary {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta .tag.accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta .tag.light {
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .meta .tag.muted {
+            border-color: transparent;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-grid-wrap .blog-card .card-body h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .blog-grid-wrap .blog-card .card-body p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .author-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .author-date {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .read-link {
+            margin-left: auto;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .read-link.primary {
+            color: var(--primary);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .read-link.secondary {
+            color: var(--secondary);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .read-link.accent {
+            color: var(--accent);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .read-link.light {
+            color: var(--primary-light);
+        }
+
+        .blog-grid-wrap .blog-card .card-body .author-row .read-link:hover {
+            gap: 0.6rem;
+        }
+
+        /* ============================================
+           BLOG POPUP / MODAL
+           ============================================ */
+        .blog-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            overflow-y: auto;
+        }
+
+        .blog-popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .blog-popup {
+            background: rgba(20, 20, 30, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            transform: translateY(50px) scale(0.95);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-popup-overlay.active .blog-popup {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        .blog-popup::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .blog-popup::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .blog-popup::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 9999px;
+        }
+
+        .blog-popup .popup-close {
+            position: sticky;
+            top: 0;
+            float: right;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            color: #FFFFFF;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            margin-left: auto;
+        }
+
+        .blog-popup .popup-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .blog-popup .popup-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-popup .popup-meta {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .blog-popup .popup-meta .popup-tag {
+            padding: 0.2rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background: rgba(108, 60, 225, 0.1);
+        }
+
+        .blog-popup .popup-meta .popup-tag.secondary {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        .blog-popup .popup-meta .popup-tag.accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .blog-popup .popup-meta .popup-tag.light {
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+        }
+
+        .blog-popup .popup-meta .popup-tag.muted {
+            border-color: transparent;
+            color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .blog-popup .popup-title {
+            font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .blog-popup .popup-author-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .blog-popup .popup-author-row img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .blog-popup .popup-author-row .popup-author-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .blog-popup .popup-author-row .popup-author-date {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-popup .popup-body {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .blog-popup .popup-body p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .blog-popup .popup-body h4 {
+            color: #FFFFFF;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .blog-popup .popup-body ul {
+            list-style: none;
+            margin: 0.5rem 0 1rem;
+            padding: 0;
+        }
+
+        .blog-popup .popup-body ul li {
+            padding: 0.3rem 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-popup .popup-body ul li::before {
+            content: '◆';
+            color: var(--primary);
+            font-size: 0.6rem;
+        }
+
+        .blog-popup .popup-cta {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .blog-popup .popup-cta .btn-primary {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .blog-popup .popup-cta .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.4);
+        }
+
+        /* ============================================
+           NEWSLETTER SECTION
+           ============================================ */
+        .newsletter-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(200deg, #0D0D1A 0%, #1A0A2E 40%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-wrap .nl-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .newsletter-wrap .nl-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 2s;
+        }
+
+        .newsletter-wrap .nl-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--primary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 5s;
+        }
+
+        .newsletter-wrap .nl-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+        .newsletter-wrap .nl-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .newsletter-wrap .nl-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .newsletter-wrap .nl-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-wrap .nl-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-wrap .nl-card .nl-form {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-wrap .nl-card .nl-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-wrap .nl-card .nl-form input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .newsletter-wrap .nl-card .nl-form input:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .newsletter-wrap .nl-card .nl-form .btn-subscribe {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .newsletter-wrap .nl-card .nl-form .btn-subscribe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.4);
+        }
+
+        .newsletter-wrap .nl-card .nl-footer {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            margin-top: 0.8rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-blog-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A0A2E 40%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-blog-wrap .cta-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.08;
+        }
+
+        .cta-blog-wrap .cta-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -20%;
+            right: -10%;
+            animation: orbFloat 14s ease-in-out infinite 1s;
+        }
+
+        .cta-blog-wrap .cta-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -20%;
+            left: -10%;
+            animation: orbFloat 14s ease-in-out infinite 4s;
+        }
+
+        .cta-blog-wrap .cta-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 14s ease-in-out infinite 7s;
+        }
+
+        .cta-blog-wrap .cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-blog-wrap .cta-badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-blog-wrap .cta-heading {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .cta-blog-wrap .cta-heading .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-blog-wrap .cta-sub {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .cta-blog-wrap .cta-button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-blog-wrap .cta-button-group .btn-primary {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 30px rgba(108, 60, 225, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-blog-wrap .cta-button-group .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(108, 60, 225, 0.5);
+        }
+
+        .cta-blog-wrap .cta-button-group .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-blog-wrap .cta-button-group .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .cta-blog-wrap .cta-footer-text {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .cta-blog-wrap .cta-footer-text span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .blog-hero { min-height: 40vh; padding: 4rem 1rem; }
+            .blog-filter-wrap { padding: 1rem 0; top: 60px; }
+            .blog-filter-wrap .filter-container { gap: 0.8rem; }
+            .blog-filter-wrap .search-wrapper { min-width: 100%; max-width: 100%; }
+            .blog-filter-wrap select { flex: 1; min-width: 120px; }
+            .blog-grid-wrap { padding: 3rem 0; }
+            .blog-grid-wrap .bg-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .blog-grid-wrap .blog-card .card-image { height: 160px; }
+            .blog-grid-wrap .blog-card .card-body { padding: 1.2rem; }
+            .blog-grid-wrap .blog-card .card-body h4 { font-size: 1.05rem; }
+            .newsletter-wrap { padding: 3rem 0; }
+            .newsletter-wrap .nl-card { padding: 2rem 1.5rem; margin: 0 1rem; }
+            .newsletter-wrap .nl-card .nl-form { flex-direction: column; align-items: center; }
+            .newsletter-wrap .nl-card .nl-form input { width: 100%; min-width: auto; }
+            .newsletter-wrap .nl-card .nl-form .btn-subscribe { width: 100%; justify-content: center; }
+            .cta-blog-wrap { padding: 3rem 0; }
+            .cta-blog-wrap .cta-button-group { flex-direction: column; align-items: center; }
+            .cta-blog-wrap .cta-button-group .btn-primary,
+            .cta-blog-wrap .cta-button-group .btn-secondary { width: 100%; max-width: 300px; justify-content: center; }
+            
+            .blog-popup { padding: 1.5rem; margin: 1rem; max-height: 85vh; }
+            .blog-popup .popup-image { height: 180px; }
+            .blog-popup .popup-title { font-size: 1.2rem; }
+            .blog-popup .popup-body { font-size: 0.9rem; }
+            .blog-popup .popup-body p { font-size: 0.9rem; }
+            .blog-popup-overlay { padding: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .blog-grid-wrap .blog-card .card-body h4 { font-size: 0.95rem; }
+            .blog-grid-wrap .blog-card .card-body p { font-size: 0.8rem; }
+            .blog-grid-wrap .blog-card .card-body .meta .tag { font-size: 0.6rem; }
+            .blog-grid-wrap .blog-card .card-body .author-row .author-name { font-size: 0.7rem; }
+            .blog-grid-wrap .blog-card .card-body .author-row .author-date { font-size: 0.6rem; }
+            .blog-hero .hero-title { font-size: 1.6rem; }
+            .blog-hero .hero-subtitle { font-size: 0.85rem; }
+            .newsletter-wrap .nl-card { padding: 1.5rem 1rem; }
+            .newsletter-wrap .nl-card h3 { font-size: 1.2rem; }
+            .newsletter-wrap .nl-card p { font-size: 0.85rem; }
+            .cta-blog-wrap .cta-heading { font-size: 1.4rem; }
+            
+            .blog-popup { padding: 1rem; }
+            .blog-popup .popup-image { height: 140px; }
+            .blog-popup .popup-title { font-size: 1rem; }
+            .blog-popup .popup-body { font-size: 0.85rem; }
+            .blog-popup .popup-body p { font-size: 0.85rem; }
+            .blog-popup .popup-cta .btn-primary { padding: 0.6rem 1.5rem; font-size: 0.8rem; }
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -30px) scale(1.1); }
+            66% { transform: translate(-30px, 20px) scale(0.9); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading Quickers...</div>
+    <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+    </div>
+</div>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <span class="brand">⚡ Quickers</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        
+        <div class="mobile-menu-grid">
+            <a href="index.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=100&h=100&fit=crop" alt="Home" class="item-image" loading="lazy">
+                <span class="item-name">Home</span>
+                <span class="item-desc">Landing page</span>
+            </a>
+            <a href="about.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&h=100&fit=crop" alt="About" class="item-image" loading="lazy">
+                <span class="item-name">About</span>
+                <span class="item-desc">Our story</span>
+            </a>
+            <a href="services.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop" alt="Services" class="item-image" loading="lazy">
+                <span class="item-name">Services</span>
+                <span class="item-desc">What we do</span>
+            </a>
+            <a href="creators.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Creators" class="item-image" loading="lazy">
+                <span class="item-name">Creators</span>
+                <span class="item-desc">Our network</span>
+            </a>
+            <a href="success.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1531746790733-6c0e45bd04f9?w=100&h=100&fit=crop" alt="Success" class="item-image" loading="lazy">
+                <span class="item-name">Success</span>
+                <span class="item-desc">Stories</span>
+            </a>
+            <a href="blog.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=100&h=100&fit=crop" alt="Blog" class="item-image" loading="lazy">
+                <span class="item-name">Blog</span>
+                <span class="item-desc">Articles</span>
+            </a>
+            <a href="faq.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop" alt="FAQ" class="item-image" loading="lazy">
+                <span class="item-name">FAQ</span>
+                <span class="item-desc">Questions</span>
+            </a>
+            <a href="contact.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Contact" class="item-image" loading="lazy">
+                <span class="item-name">Contact</span>
+                <span class="item-desc">Get in touch</span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-footer">
+            <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+                ⚡ Get Started
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-glass">
+            <a href="index.html" class="navbar-brand">
+                <div class="brand-icon">⚡</div>
+                <span>Quickers</span>
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="creators.html">Creators</a></li>
+                <li><a href="success.html">Success</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Get Started</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- ========== BLOG HERO ========== -->
+<!-- ========================================== -->
+<section class="blog-hero">
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+
+    <div class="hero-content">
+        <span class="hero-badge">📝 Blog</span>
+        <h1 class="hero-title">
+            Creator <span class="gradient-text">Resources</span>
+        </h1>
+        <p class="hero-subtitle">
+            Tips, strategies, and insights to help you grow your TikTok career and build a sustainable creator business.
+        </p>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== BLOG FILTER & SEARCH ========== -->
+<!-- ========================================== -->
+<section class="blog-filter-wrap">
+    <div class="container">
+        <div class="filter-container">
+            <div class="search-wrapper">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="blogSearch" placeholder="Search articles...">
+            </div>
+            
+            <select id="blogCategoryFilter">
+                <option value="all">All Categories</option>
+                <option value="growth">Growth</option>
+                <option value="monetization">Monetization</option>
+                <option value="strategy">Strategy</option>
+                <option value="community">Community</option>
+                <option value="tools">Tools</option>
+            </select>
+
+            <span class="result-count" id="blogResultCount">Showing 6 articles</span>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== BLOG GRID ========== -->
+<!-- ========================================== -->
+<section class="blog-grid-wrap">
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
+
+    <div class="container">
+        <div id="blogGrid" class="bg-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card" data-category="growth" data-id="1">
+                <img class="card-image" src="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=600&h=300&fit=crop" alt="Blog post" loading="lazy">
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="tag primary">Growth</span>
+                        <span class="tag muted">5 min read</span>
+                    </div>
+                    <h4>10 Proven Strategies to Grow Your TikTok Following in 2026</h4>
+                    <p>Discover the latest tactics and strategies that top creators are using to grow their audience on TikTok.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" alt="Author" loading="lazy">
+                        <div>
+                            <p class="author-name">Sarah Chen</p>
+                            <p class="author-date">March 15, 2026</p>
+                        </div>
+                        <button class="read-link primary" data-id="1">Read More →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-card" data-category="monetization" data-id="2">
+                <img class="card-image" src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=300&fit=crop" alt="Blog post" loading="lazy">
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="tag secondary">Monetization</span>
+                        <span class="tag muted">7 min read</span>
+                    </div>
+                    <h4>How to Monetize Your TikTok Content: A Complete Guide</h4>
+                    <p>Learn multiple revenue streams for creators, from brand deals to merchandise and affiliate marketing.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Author" loading="lazy">
+                        <div>
+                            <p class="author-name">Marcus Johnson</p>
+                            <p class="author-date">March 12, 2026</p>
+                        </div>
+                        <button class="read-link secondary" data-id="2">Read More →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="blog-card" data-category="strategy" data-id="3">
+                <img class="card-image" src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&h=300&fit=crop" alt="Blog post" loading="lazy">
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="tag accent">Strategy</span>
+                        <span class="tag muted">6 min read</span>
+                    </div>
+                    <h4>TikTok Algorithm Explained: How to Get More Views</h4>
+                    <p>Understanding how the TikTok algorithm works and how to use it to your advantage to get more views.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1494790108372-be9c29b29330?w=40&h=40&fit=crop&crop=face" alt="Author" loading="lazy">
+                        <div>
+                            <p class="author-name">Emily Rodriguez</p>
+                            <p class="author-date">March 10, 2026</p>
+                        </div>
+                        <button class="read-link accent" data-id="3">Read More →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="blog-card" data-category="community" data-id="4">
+                <img class="card-image" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=300&fit=crop" alt="Blog post" loading="lazy">
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="tag light">Community</span>
+                        <span class="tag muted">4 min read</span>
+                    </div>
+                    <h4>Building a Loyal Community: Tips for Creator Engagement</h4>
+                    <p>Learn how to build a loyal community of followers who engage with your content and support your journey.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="Author" loading="lazy">
+                        <div>
+                            <p class="author-name">David Kim</p>
+                            <p class="author-date">March 8, 2026</p>
+                        </div>
+                        <button class="read-link light" data-id="4">Read More →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="blog-card" data-category="tools" data-id="5">
+                <img class="card-image" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=300&fit=crop" alt="Blog post" loading="lazy">
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="tag" style="border-color: var(--secondary-light); color: var(--secondary-light);">Tools</span>
+                        <span class="tag muted">8 min read</span>
+                    </div>
+                    <h4>Essential Tools Every TikTok Creator Should Use in 2026</h4>
+                    <p>The best tools for content creation, analytics, scheduling, and monetization for TikTok creators.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Author" loading="lazy">
+                        <div>
+                            <p class="author-name">Alex Rivera</p>
+                            <p class="author-date">March 5, 2026</p>
+                        </div>
+                        <button class="read-link" style="color: var(--secondary-light);" data-id="5">Read More →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Post 6 -->
+            <div class="blog-card" data-category="growth" data-id="6">
+                <img class="card-image" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=300&fit=crop" alt="Blog post" loading="lazy">
+                <div class="card-body">
+                    <div class="meta">
+                        <span class="tag primary">Growth</span>
+                        <span class="tag muted">6 min read</span>
+                    </div>
+                    <h4>How to Go Viral on TikTok: Lessons from Top Creators</h4>
+                    <p>Learn the secrets behind viral TikTok content and how you can apply them to your own videos.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=40&h=40&fit=crop&crop=face" alt="Author" loading="lazy">
+                        <div>
+                            <p class="author-name">Sarah Chen</p>
+                            <p class="author-date">March 1, 2026</p>
+                        </div>
+                        <button class="read-link primary" data-id="6">Read More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== BLOG POPUP ========== -->
+<!-- ========================================== -->
+<div class="blog-popup-overlay" id="blogPopup">
+    <div class="blog-popup">
+        <button class="popup-close" id="popupClose">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <img class="popup-image" id="popupImage" src="" alt="Article image">
+        
+        <div class="popup-meta" id="popupMeta">
+            <span class="popup-tag" id="popupTag">Growth</span>
+            <span class="popup-tag muted" id="popupReadTime">5 min read</span>
+        </div>
+        
+        <h2 class="popup-title" id="popupTitle">Article Title</h2>
+        
+        <div class="popup-author-row">
+            <img id="popupAuthorImg" src="" alt="Author">
+            <div>
+                <p class="popup-author-name" id="popupAuthorName">Author Name</p>
+                <p class="popup-author-date" id="popupAuthorDate">Date</p>
+            </div>
+        </div>
+        
+        <div class="popup-body" id="popupBody">
+            <p>Full article content will appear here...</p>
+        </div>
+        
+        <div class="popup-cta">
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-rocket"></i> Join Quickers Today
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========================================== -->
+<!-- ========== NEWSLETTER SECTION ========== -->
+<!-- ========================================== -->
+<section class="newsletter-wrap">
+    <div class="nl-orb"></div>
+    <div class="nl-orb"></div>
+
+    <div class="container">
+        <div class="nl-card">
+            <span class="icon">📬</span>
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest tips, strategies, and resources delivered to your inbox weekly.</p>
+            <form class="nl-form" id="newsletterForm">
+                <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                <button type="submit" class="btn-subscribe">
+                    Subscribe <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+            <p class="nl-footer">No spam. Unsubscribe anytime.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== CTA SECTION ========== -->
+<!-- ========================================== -->
+<section class="cta-blog-wrap">
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+
+    <div class="cta-content">
+        <span class="cta-badge">🚀 Start Your Journey</span>
+        <h2 class="cta-heading">
+            Ready to <span class="gradient-text">Level Up</span><br>Your Creator Career?
+        </h2>
+        <p class="cta-sub">
+            Join thousands of creators already growing their audience and income with Quickers.
+        </p>
+        <div class="cta-button-group">
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-rocket"></i> Get Started Free
+            </a>
+            <a href="services.html" class="btn-secondary">
+                <i class="fas fa-cog"></i> Explore Services
+            </a>
+        </div>
+        <p class="cta-footer-text">
+            <span>✨</span> No credit card required · 14-day free trial · 24/7 support <span>✨</span>
+        </p>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">⚡ <span>Quickers</span></div>
+                <p>The premier network for TikTok creators to grow, monetize, and build sustainable careers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="creators.html">Creators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="success.html">Success Stories</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quickers Creator Network. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div class="scroll-progress"></div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script src="assets/js/script.js"></script>
+
+<script>
+// ============================================
+// BLOG FILTER & SEARCH
+// ============================================
+(function initBlogFilters() {
+    const searchInput = document.getElementById('blogSearch');
+    const categoryFilter = document.getElementById('blogCategoryFilter');
+    const blogGrid = document.getElementById('blogGrid');
+    const resultCount = document.getElementById('blogResultCount');
+    
+    function filterBlog() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const category = categoryFilter.value;
+        
+        let cards = Array.from(blogGrid.querySelectorAll('.blog-card'));
+        
+        if (searchTerm) {
+            cards = cards.filter(card => {
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const description = card.querySelector('.card-body p').textContent.toLowerCase();
+                return title.includes(searchTerm) || description.includes(searchTerm);
+            });
+        }
+        
+        if (category !== 'all') {
+            cards = cards.filter(card => {
+                return card.dataset.category === category;
+            });
+        }
+        
+        blogGrid.innerHTML = '';
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            blogGrid.appendChild(card);
+            
+            setTimeout(() => {
+                card.style.transition = 'all 0.4s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+        
+        const count = cards.length;
+        resultCount.textContent = `Showing ${count} article${count !== 1 ? 's' : ''}`;
+        
+        if (count === 0) {
+            const noResult = document.createElement('div');
+            noResult.className = 'glass';
+            noResult.style.cssText = 'grid-column: 1 / -1; padding: 4rem 2rem; text-align: center; border-radius: 20px;';
+            noResult.innerHTML = `
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+                <h4 style="color: #FFFFFF; margin-bottom: 0.5rem;">No articles found</h4>
+                <p style="color: rgba(255,255,255,0.4);">Try adjusting your search or filter criteria.</p>
+            `;
+            blogGrid.appendChild(noResult);
+        }
+    }
+    
+    searchInput.addEventListener('input', filterBlog);
+    categoryFilter.addEventListener('change', filterBlog);
+    filterBlog();
+})();
+
+// ============================================
+// BLOG POPUP / READ MORE
+// ============================================
+(function initBlogPopup() {
+    const popup = document.getElementById('blogPopup');
+    const closeBtn = document.getElementById('popupClose');
+    const readMoreBtns = document.querySelectorAll('.read-link');
+    
+    // Article data
+    const articles = {
+        1: {
+            title: '10 Proven Strategies to Grow Your TikTok Following in 2026',
+            image: 'https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=800&h=400&fit=crop',
+            tag: 'Growth',
+            tagClass: 'popup-tag',
+            readTime: '5 min read',
+            author: 'Sarah Chen',
+            authorImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face',
+            date: 'March 15, 2026',
+            body: `
+                <p>Growing your TikTok following in 2026 requires a strategic approach that combines creativity with data-driven decisions. Here are 10 proven strategies that top creators are using to build massive audiences.</p>
+                <h4>1. Post at Optimal Times</h4>
+                <p>Research shows that posting between 7-9 PM EST and 11 AM-1 PM EST yields the highest engagement rates. Use TikTok Analytics to find your audience's peak activity times.</p>
+                <h4>2. Leverage Trending Sounds</h4>
+                <p>Using trending sounds can increase your video's reach by up to 300%. Check the TikTok Creative Center daily for emerging trends.</p>
+                <h4>3. Create Content Buckets</h4>
+                <p>Divide your content into 3-4 categories: educational, entertaining, inspirational, and behind-the-scenes. This keeps your feed diverse and engaging.</p>
+                <h4>4. Engage With Your Audience</h4>
+                <p>Reply to comments, host Q&A sessions, and create content based on follower suggestions. Engagement signals boost your visibility in the algorithm.</p>
+                <h4>5. Collaborate With Other Creators</h4>
+                <p>Duets, stitches, and collaborative videos expose you to new audiences. Partner with creators in your niche for mutual growth.</p>
+                <p>Ready to implement these strategies? Quickers provides personalized coaching to help you optimize your content strategy.</p>
+            `
+        },
+        2: {
+            title: 'How to Monetize Your TikTok Content: A Complete Guide',
+            image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop',
+            tag: 'Monetization',
+            tagClass: 'popup-tag secondary',
+            readTime: '7 min read',
+            author: 'Marcus Johnson',
+            authorImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face',
+            date: 'March 12, 2026',
+            body: `
+                <p>Monetizing your TikTok content is the key to turning your passion into a sustainable career. Here's a comprehensive guide to the multiple revenue streams available to creators.</p>
+                <h4>1. Brand Deals & Sponsorships</h4>
+                <p>Brand deals are the most common way creators earn income. Quickers helps you connect with brands that align with your content and audience.</p>
+                <h4>2. Creator Fund & Bonuses</h4>
+                <p>TikTok's Creator Fund pays based on video views. While not a primary income source, it's a great addition to your revenue mix.</p>
+                <h4>3. Affiliate Marketing</h4>
+                <p>Promote products you genuinely love and earn commissions on sales. Use trackable links and disclose partnerships transparently.</p>
+                <h4>4. Merchandise</h4>
+                <p>Launch your own merchandise line with platforms like Spring or Shopify. Start with a small collection and scale based on demand.</p>
+                <h4>5. Digital Products</h4>
+                <p>Create and sell digital products like presets, guides, or courses. This provides passive income and establishes you as an expert.</p>
+                <p>With Quickers, you get access to exclusive brand partnerships and monetization coaching to maximize your earnings.</p>
+            `
+        },
+        3: {
+            title: 'TikTok Algorithm Explained: How to Get More Views',
+            image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&h=400&fit=crop',
+            tag: 'Strategy',
+            tagClass: 'popup-tag accent',
+            readTime: '6 min read',
+            author: 'Emily Rodriguez',
+            authorImg: 'https://images.unsplash.com/photo-1494790108372-be9c29b29330?w=60&h=60&fit=crop&crop=face',
+            date: 'March 10, 2026',
+            body: `
+                <p>Understanding the TikTok algorithm is the first step to getting more views. Here's how the platform actually works and how you can use it to your advantage.</p>
+                <h4>What the Algorithm Prioritizes</h4>
+                <p>The TikTok algorithm prioritizes content based on watch time, engagement, and relevance. Videos that keep users watching longer get pushed to more For You pages.</p>
+                <h4>Key Ranking Factors</h4>
+                <ul>
+                    <li>Watch time and completion rate</li>
+                    <li>Likes, comments, shares, and saves</li>
+                    <li>Video information (hashtags, captions, sounds)</li>
+                    <li>User interactions and preferences</li>
+                </ul>
+                <h4>How to Optimize for the Algorithm</h4>
+                <p>Create videos that hook viewers in the first 3 seconds, use relevant hashtags, and post consistently. The algorithm rewards creators who keep users engaged.</p>
+                <p>Quickers provides advanced analytics and growth strategies to help you master the algorithm and achieve viral success.</p>
+            `
+        },
+        4: {
+            title: 'Building a Loyal Community: Tips for Creator Engagement',
+            image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=400&fit=crop',
+            tag: 'Community',
+            tagClass: 'popup-tag light',
+            readTime: '4 min read',
+            author: 'David Kim',
+            authorImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face',
+            date: 'March 8, 2026',
+            body: `
+                <p>Building a loyal community is about more than just growing your follower count. It's about creating meaningful connections with your audience.</p>
+                <h4>Engage Authentically</h4>
+                <p>Respond to comments, ask questions, and make your audience feel heard. Authentic engagement builds trust and loyalty.</p>
+                <h4>Create Interactive Content</h4>
+                <p>Use polls, Q&A stickers, and duet challenges to encourage participation. The more your audience interacts, the stronger your community becomes.</p>
+                <h4>Show Your Personality</h4>
+                <p>Share behind-the-scenes content and personal stories. Vulnerability and authenticity make your audience feel connected to you as a person.</p>
+                <h4>Celebrate Your Community</h4>
+                <p>Feature fan content, shout out your supporters, and create content inspired by your audience. When they feel valued, they become your biggest advocates.</p>
+                <p>Quickers connects you with a supportive community of creators who share resources, collaborate, and grow together.</p>
+            `
+        },
+        5: {
+            title: 'Essential Tools Every TikTok Creator Should Use in 2026',
+            image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=400&fit=crop',
+            tag: 'Tools',
+            tagClass: 'popup-tag',
+            readTime: '8 min read',
+            author: 'Alex Rivera',
+            authorImg: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face',
+            date: 'March 5, 2026',
+            body: `
+                <p>Having the right tools can dramatically improve your content quality and efficiency. Here are the essential tools every TikTok creator should use in 2026.</p>
+                <h4>1. Video Editing Apps</h4>
+                <p>CapCut (free) and Adobe Premiere Rush offer powerful editing features. For mobile creators, VN Video Editor and InShot are excellent alternatives.</p>
+                <h4>2. Analytics Tools</h4>
+                <p>TikTok's built-in analytics provide basic insights. For deeper analysis, use tools like SocialPilot or HypeAuditor to track performance and identify trends.</p>
+                <h4>3. Scheduling Platforms</h4>
+                <p>Plan and schedule your posts with tools like Buffer or Later. Consistent posting is key to algorithm success.</p>
+                <h4>4. Hashtag Research Tools</h4>
+                <p>Use tools like All Hashtag or TikTok's search bar to find relevant hashtags. Mix popular and niche tags for better reach.</p>
+                <h4>5. Monetization Platforms</h4>
+                <p>Quickers connects you with brands and provides coaching to help you monetize effectively. Join to access exclusive partnership opportunities.</p>
+            `
+        },
+        6: {
+            title: 'How to Go Viral on TikTok: Lessons from Top Creators',
+            image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&h=400&fit=crop',
+            tag: 'Growth',
+            tagClass: 'popup-tag',
+            readTime: '6 min read',
+            author: 'Sarah Chen',
+            authorImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60&h=60&fit=crop&crop=face',
+            date: 'March 1, 2026',
+            body: `
+                <p>Going viral on TikTok isn't just luck—it's a combination of strategy, timing, and understanding what resonates with audiences. Here are lessons from top creators.</p>
+                <h4>Hook Viewers Early</h4>
+                <p>The first 3 seconds are crucial. Start with a bold statement, intriguing question, or visually captivating moment to stop the scroll.</p>
+                <h4>Tell a Story</h4>
+                <p>Viral videos often have a narrative arc. Even short videos can tell a compelling story that keeps viewers engaged until the end.</p>
+                <h4>Embrace Trends Authentically</h4>
+                <p>Participate in trends but add your unique twist. Authenticity stands out more than perfect replication.</p>
+                <h4>Test and Iterate</h4>
+                <p>Post variations of content to see what works. Analyze what makes your best-performing videos successful and replicate those elements.</p>
+                <p>With Quickers coaching, you'll learn how to create content that captivates audiences and maximizes your viral potential.</p>
+            `
+        }
+    };
+
+    // Open popup
+    function openPopup(id) {
+        const article = articles[id];
+        if (!article) return;
+        
+        // Populate content
+        document.getElementById('popupImage').src = article.image;
+        document.getElementById('popupImage').alt = article.title;
+        document.getElementById('popupTag').textContent = article.tag;
+        document.getElementById('popupTag').className = article.tagClass;
+        document.getElementById('popupReadTime').textContent = article.readTime;
+        document.getElementById('popupTitle').textContent = article.title;
+        document.getElementById('popupAuthorImg').src = article.authorImg;
+        document.getElementById('popupAuthorImg').alt = article.author;
+        document.getElementById('popupAuthorName').textContent = article.author;
+        document.getElementById('popupAuthorDate').textContent = article.date;
+        document.getElementById('popupBody').innerHTML = article.body;
+        
+        // Open with animation
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close popup
+    function closePopup() {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners
+    readMoreBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const id = parseInt(this.dataset.id);
+            openPopup(id);
+        });
+    });
+
+    closeBtn.addEventListener('click', closePopup);
+
+    // Close on overlay click
+    popup.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closePopup();
+        }
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popup.classList.contains('active')) {
+            closePopup();
+        }
+    });
+})();
+
+// ============================================
+// NEWSLETTER FORM
+// ============================================
+(function initNewsletter() {
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('newsletterEmail');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        
+        if (email && email.includes('@')) {
+            const originalContent = form.innerHTML;
+            form.innerHTML = `
+                <div style="width: 100%; padding: 0.8rem; background: rgba(6,182,212,0.1); border: 1px solid var(--accent); border-radius: 9999px; color: var(--accent); text-align: center;">
+                    ✅ Thank you for subscribing!
+                </div>
+            `;
+            emailInput.value = '';
+            
+            setTimeout(() => {
+                form.innerHTML = originalContent;
+            }, 3000);
+        }
+    });
+})();
+</script>
+
+</body>
+</html>

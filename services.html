@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services offered by Quickers Creator Network - Creator Coaching, Brand Partnerships, Growth Analytics, Community Support, and more.">
+    <meta name="keywords" content="creator services, TikTok coaching, brand partnerships, growth analytics, creator community">
+    <title>Services - Quickers Creator Network</title>
+    
+    <meta property="og:title" content="Services - Quickers Creator Network">
+    <meta property="og:description" content="Everything you need to succeed as a TikTok creator - coaching, partnerships, analytics, and community.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        /* ============================================
+           GLITCHY FONT STYLES
+           ============================================ */
+        .glitch-text {
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .glitch-text::before {
+            animation: glitch-before 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+            color: var(--primary);
+        }
+        
+        .glitch-text::after {
+            animation: glitch-after 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+            color: var(--secondary);
+        }
+        
+        @keyframes glitch-before {
+            0% { transform: translate(0); opacity: 0.8; }
+            20% { transform: translate(-2px, 1px); opacity: 1; }
+            40% { transform: translate(2px, -1px); opacity: 0.6; }
+            60% { transform: translate(-1px, 2px); opacity: 0.9; }
+            80% { transform: translate(1px, -2px); opacity: 0.7; }
+            100% { transform: translate(0); opacity: 0.8; }
+        }
+        
+        @keyframes glitch-after {
+            0% { transform: translate(0); opacity: 0.6; }
+            20% { transform: translate(1px, -1px); opacity: 1; }
+            40% { transform: translate(-1px, 2px); opacity: 0.5; }
+            60% { transform: translate(2px, 1px); opacity: 0.8; }
+            80% { transform: translate(-2px, -1px); opacity: 0.6; }
+            100% { transform: translate(0); opacity: 0.6; }
+        }
+
+        /* ============================================
+           SERVICES HERO - NO VIDEO
+           ============================================ */
+        .services-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1.5rem;
+            position: relative;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 50%, #0A0A0F 100%);
+            overflow: hidden;
+        }
+
+        .services-hero .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.12;
+        }
+
+        .services-hero .hero-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 10s ease-in-out infinite;
+        }
+
+        .services-hero .hero-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 10s ease-in-out infinite 3s;
+        }
+
+        .services-hero .hero-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 10s ease-in-out infinite 6s;
+        }
+
+        .services-hero .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .services-hero .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.5rem;
+        }
+
+        .services-hero .hero-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .services-hero .hero-title .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-hero .hero-subtitle {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           SERVICES GRID SECTION
+           ============================================ */
+        .services-grid-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A0F 0%, #14141E 50%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-grid-wrap .sg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .services-grid-wrap .sg-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 1s;
+        }
+
+        .services-grid-wrap .sg-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 4s;
+        }
+
+        .services-grid-wrap .sg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-grid-wrap .sg-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-grid-wrap .sg-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .services-grid-wrap .sg-card:hover::before {
+            opacity: 1;
+        }
+
+        .services-grid-wrap .sg-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .services-grid-wrap .sg-card .card-glow {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(108,60,225,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .services-grid-wrap .sg-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .services-grid-wrap .sg-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .services-grid-wrap .sg-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.6;
+        }
+
+        .services-grid-wrap .sg-card .feature-list {
+            list-style: none;
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        .services-grid-wrap .sg-card .feature-list li {
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .services-grid-wrap .sg-card .feature-list li::before {
+            content: '◆';
+            color: var(--primary);
+            font-size: 0.6rem;
+        }
+
+        .services-grid-wrap .sg-card .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .services-grid-wrap .sg-card .btn-link:hover {
+            color: var(--primary-light);
+            gap: 0.8rem;
+        }
+
+        /* ============================================
+           WHY QUICKERS SECTION
+           ============================================ */
+        .why-services-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(200deg, #0D0D1A 0%, #1A0A2E 40%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-services-wrap .ws-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .why-services-wrap .ws-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 2s;
+        }
+
+        .why-services-wrap .ws-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--primary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 5s;
+        }
+
+        .why-services-wrap .ws-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-services-wrap .ws-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .why-services-wrap .ws-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .why-services-wrap .ws-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .why-services-wrap .ws-card h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .why-services-wrap .ws-card p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-services-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A0A2E 40%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-services-wrap .cta-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.08;
+        }
+
+        .cta-services-wrap .cta-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -20%;
+            right: -10%;
+            animation: orbFloat 14s ease-in-out infinite 1s;
+        }
+
+        .cta-services-wrap .cta-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -20%;
+            left: -10%;
+            animation: orbFloat 14s ease-in-out infinite 4s;
+        }
+
+        .cta-services-wrap .cta-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 14s ease-in-out infinite 7s;
+        }
+
+        .cta-services-wrap .cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-services-wrap .cta-badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-services-wrap .cta-heading {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .cta-services-wrap .cta-heading .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-services-wrap .cta-sub {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .cta-services-wrap .cta-button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-services-wrap .cta-button-group .btn-primary {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 30px rgba(108, 60, 225, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-services-wrap .cta-button-group .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(108, 60, 225, 0.5);
+        }
+
+        .cta-services-wrap .cta-button-group .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-services-wrap .cta-button-group .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .cta-services-wrap .cta-footer-text {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .cta-services-wrap .cta-footer-text span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ============================================
+           SECTION HEADERS
+           ============================================ */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header .badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-header .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.4);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .services-grid-wrap {
+                padding: 3rem 0;
+            }
+
+            .services-grid-wrap .sg-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .services-grid-wrap .sg-card {
+                padding: 1.5rem;
+            }
+
+            .services-grid-wrap .sg-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .services-grid-wrap .sg-card p {
+                font-size: 0.85rem;
+            }
+
+            .services-grid-wrap .sg-card .feature-list li {
+                font-size: 0.8rem;
+            }
+
+            .why-services-wrap {
+                padding: 3rem 0;
+            }
+
+            .why-services-wrap .ws-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .why-services-wrap .ws-card {
+                padding: 1.2rem;
+            }
+
+            .why-services-wrap .ws-card h5 {
+                font-size: 0.9rem;
+            }
+
+            .why-services-wrap .ws-card p {
+                font-size: 0.75rem;
+            }
+
+            .cta-services-wrap {
+                padding: 3rem 0;
+            }
+
+            .cta-services-wrap .cta-button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-services-wrap .cta-button-group .btn-primary,
+            .cta-services-wrap .cta-button-group .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .services-hero {
+                min-height: 50vh;
+                padding: 4rem 1rem;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid-wrap .sg-card {
+                padding: 1.2rem;
+            }
+
+            .services-grid-wrap .sg-card .icon {
+                font-size: 2.2rem;
+            }
+
+            .services-grid-wrap .sg-card h3 {
+                font-size: 1rem;
+            }
+
+            .why-services-wrap .ws-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
+            }
+
+            .why-services-wrap .ws-card {
+                padding: 0.8rem;
+            }
+
+            .why-services-wrap .ws-card .icon {
+                font-size: 1.5rem;
+            }
+
+            .why-services-wrap .ws-card h5 {
+                font-size: 0.8rem;
+            }
+
+            .why-services-wrap .ws-card p {
+                font-size: 0.7rem;
+            }
+
+            .cta-services-wrap .cta-heading {
+                font-size: 1.6rem;
+            }
+
+            .services-hero .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .services-hero .hero-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading Quickers...</div>
+    <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+    </div>
+</div>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <span class="brand">⚡ Quickers</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        
+        <div class="mobile-menu-grid">
+            <a href="index.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=100&h=100&fit=crop" alt="Home" class="item-image" loading="lazy">
+                <span class="item-name">Home</span>
+                <span class="item-desc">Landing page</span>
+            </a>
+            <a href="about.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&h=100&fit=crop" alt="About" class="item-image" loading="lazy">
+                <span class="item-name">About</span>
+                <span class="item-desc">Our story</span>
+            </a>
+            <a href="services.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop" alt="Services" class="item-image" loading="lazy">
+                <span class="item-name">Services</span>
+                <span class="item-desc">What we do</span>
+            </a>
+            <a href="creators.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Creators" class="item-image" loading="lazy">
+                <span class="item-name">Creators</span>
+                <span class="item-desc">Our network</span>
+            </a>
+            <a href="success.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1531746790733-6c0e45bd04f9?w=100&h=100&fit=crop" alt="Success" class="item-image" loading="lazy">
+                <span class="item-name">Success</span>
+                <span class="item-desc">Stories</span>
+            </a>
+            <a href="blog.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=100&h=100&fit=crop" alt="Blog" class="item-image" loading="lazy">
+                <span class="item-name">Blog</span>
+                <span class="item-desc">Articles</span>
+            </a>
+            <a href="faq.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop" alt="FAQ" class="item-image" loading="lazy">
+                <span class="item-name">FAQ</span>
+                <span class="item-desc">Questions</span>
+            </a>
+            <a href="contact.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Contact" class="item-image" loading="lazy">
+                <span class="item-name">Contact</span>
+                <span class="item-desc">Get in touch</span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-footer">
+            <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+                ⚡ Get Started
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-glass">
+            <a href="index.html" class="navbar-brand">
+                <div class="brand-icon">⚡</div>
+                <span>Quickers</span>
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="creators.html">Creators</a></li>
+                <li><a href="success.html">Success</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Get Started</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- ========== SERVICES HERO ========== -->
+<!-- ========================================== -->
+<section class="services-hero">
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+
+    <div class="hero-content">
+        <span class="hero-badge">⚡ Our Services</span>
+        <h1 class="hero-title">
+            Everything You Need to <br><span class="gradient-text">Succeed</span>
+        </h1>
+        <p class="hero-subtitle">
+            Comprehensive tools, coaching, and support designed to accelerate your 
+            creator journey and help you build a sustainable career.
+        </p>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SERVICES GRID ========== -->
+<!-- ========================================== -->
+<section class="services-grid-wrap">
+    <div class="sg-orb"></div>
+    <div class="sg-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">What We Offer</span>
+            <h2>Premium <span class="gradient-text">Creator Services</span></h2>
+            <p>Each service is designed to help you grow, monetize, and thrive as a creator.</p>
+        </div>
+
+        <div class="sg-grid">
+            <!-- Service 1: Creator Coaching -->
+            <div class="sg-card">
+                <div class="card-glow"></div>
+                <span class="icon">📚</span>
+                <h3>Creator Coaching</h3>
+                <p>1-on-1 coaching from successful creators who've been where you are.</p>
+                <ul class="feature-list">
+                    <li>Personalized growth strategy</li>
+                    <li>Weekly 1-on-1 sessions</li>
+                    <li>Content review &amp; feedback</li>
+                    <li>Accountability &amp; support</li>
+                </ul>
+                <a href="contact.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 2: Brand Partnerships -->
+            <div class="sg-card">
+                <div class="card-glow" style="background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%);"></div>
+                <span class="icon">🤝</span>
+                <h3>Brand Partnerships</h3>
+                <p>Get matched with brands that align with your content and audience.</p>
+                <ul class="feature-list">
+                    <li>Curated brand matches</li>
+                    <li>Negotiation support</li>
+                    <li>Campaign management</li>
+                    <li>Fair compensation</li>
+                </ul>
+                <a href="contact.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 3: Growth Analytics -->
+            <div class="sg-card">
+                <div class="card-glow" style="background: radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%);"></div>
+                <span class="icon">📊</span>
+                <h3>Growth Analytics</h3>
+                <p>Advanced analytics to understand your audience and optimize content.</p>
+                <ul class="feature-list">
+                    <li>Audience insights</li>
+                    <li>Content performance tracking</li>
+                    <li>Growth recommendations</li>
+                    <li>Trend analysis</li>
+                </ul>
+                <a href="contact.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 4: Community Support -->
+            <div class="sg-card">
+                <div class="card-glow" style="background: radial-gradient(circle, rgba(108,60,225,0.06) 0%, transparent 70%);"></div>
+                <span class="icon">👥</span>
+                <h3>Community Support</h3>
+                <p>Join a supportive community of creators who help each other succeed.</p>
+                <ul class="feature-list">
+                    <li>Private community access</li>
+                    <li>Networking events</li>
+                    <li>Peer feedback</li>
+                    <li>Collaboration opportunities</li>
+                </ul>
+                <a href="contact.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 5: Content Strategy -->
+            <div class="sg-card">
+                <div class="card-glow" style="background: radial-gradient(circle, rgba(236,72,153,0.06) 0%, transparent 70%);"></div>
+                <span class="icon">🧠</span>
+                <h3>Content Strategy</h3>
+                <p>Data-driven content strategies to maximize engagement and reach.</p>
+                <ul class="feature-list">
+                    <li>Content calendar planning</li>
+                    <li>Trend identification</li>
+                    <li>Viral content strategies</li>
+                    <li>Hashtag optimization</li>
+                </ul>
+                <a href="contact.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 6: Monetization -->
+            <div class="sg-card">
+                <div class="card-glow" style="background: radial-gradient(circle, rgba(6,182,212,0.06) 0%, transparent 70%);"></div>
+                <span class="icon">💰</span>
+                <h3>Monetization</h3>
+                <p>Multiple revenue streams to build a sustainable creator business.</p>
+                <ul class="feature-list">
+                    <li>Brand deals &amp; sponsorships</li>
+                    <li>Merchandise creation</li>
+                    <li>Affiliate marketing</li>
+                    <li>Platform monetization</li>
+                </ul>
+                <a href="contact.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== WHY QUICKERS ========== -->
+<!-- ========================================== -->
+<section class="why-services-wrap">
+    <div class="ws-orb"></div>
+    <div class="ws-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Why Quickers</span>
+            <h2>Built for <span class="gradient-text">Creators, By Creators</span></h2>
+            <p>We understand the creator journey because we've been there ourselves.</p>
+        </div>
+
+        <div class="ws-grid">
+            <div class="ws-card">
+                <span class="icon">🎯</span>
+                <h5>Creator-First</h5>
+                <p>Everything we do is designed with creators in mind.</p>
+            </div>
+            <div class="ws-card">
+                <span class="icon">📈</span>
+                <h5>Proven Results</h5>
+                <p>Our methods have generated 500M+ views for creators.</p>
+            </div>
+            <div class="ws-card">
+                <span class="icon">🤝</span>
+                <h5>Trusted Partners</h5>
+                <p>250+ brands trust us to connect with top creators.</p>
+            </div>
+            <div class="ws-card">
+                <span class="icon">💪</span>
+                <h5>100% Support</h5>
+                <p>Dedicated support team available 24/7 for all creators.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== CTA SECTION ========== -->
+<!-- ========================================== -->
+<section class="cta-services-wrap">
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+
+    <div class="cta-content">
+        <span class="cta-badge">🚀 Ready to Launch</span>
+        <h2 class="cta-heading">
+            Ready to <span class="gradient-text">Level Up</span><br>Your Creator Career?
+        </h2>
+        <p class="cta-sub">
+            Join thousands of creators already growing their audience and income with Quickers.
+        </p>
+        <div class="cta-button-group">
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-rocket"></i> Get Started Free
+            </a>
+            <a href="creators.html" class="btn-secondary">
+                <i class="fas fa-users"></i> Meet Creators
+            </a>
+        </div>
+        <p class="cta-footer-text">
+            <span>✨</span> No credit card required · 14-day free trial · 24/7 support <span>✨</span>
+        </p>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">⚡ <span>Quickers</span></div>
+                <p>The premier network for TikTok creators to grow, monetize, and build sustainable careers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="creators.html">Creators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="success.html">Success Stories</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quickers Creator Network. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div class="scroll-progress"></div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>

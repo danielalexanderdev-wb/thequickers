@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about Quickers Creator Network. Find answers about creator tools, community, partnerships, and more.">
+    <meta name="keywords" content="FAQ, creator network, TikTok growth, brand partnerships, creator tools">
+    <title>FAQ - Quickers Creator Network</title>
+    
+    <meta property="og:title" content="FAQ - Quickers Creator Network">
+    <meta property="og:description" content="Find answers to common questions about Quickers Creator Network.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <style>
+        /* ============================================
+           GLITCHY FONT STYLES
+           ============================================ */
+        .glitch-text {
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .glitch-text::before {
+            animation: glitch-before 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+            color: var(--primary);
+        }
+        
+        .glitch-text::after {
+            animation: glitch-after 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+            color: var(--secondary);
+        }
+        
+        @keyframes glitch-before {
+            0% { transform: translate(0); opacity: 0.8; }
+            20% { transform: translate(-2px, 1px); opacity: 1; }
+            40% { transform: translate(2px, -1px); opacity: 0.6; }
+            60% { transform: translate(-1px, 2px); opacity: 0.9; }
+            80% { transform: translate(1px, -2px); opacity: 0.7; }
+            100% { transform: translate(0); opacity: 0.8; }
+        }
+        
+        @keyframes glitch-after {
+            0% { transform: translate(0); opacity: 0.6; }
+            20% { transform: translate(1px, -1px); opacity: 1; }
+            40% { transform: translate(-1px, 2px); opacity: 0.5; }
+            60% { transform: translate(2px, 1px); opacity: 0.8; }
+            80% { transform: translate(-2px, -1px); opacity: 0.6; }
+            100% { transform: translate(0); opacity: 0.6; }
+        }
+
+        /* ============================================
+           FAQ HERO - NO VIDEO
+           ============================================ */
+        .faq-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1.5rem;
+            position: relative;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 50%, #0A0A0F 100%);
+            overflow: hidden;
+        }
+
+        .faq-hero .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.12;
+        }
+
+        .faq-hero .hero-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 10s ease-in-out infinite;
+        }
+
+        .faq-hero .hero-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 10s ease-in-out infinite 3s;
+        }
+
+        .faq-hero .hero-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 10s ease-in-out infinite 6s;
+        }
+
+        .faq-hero .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .faq-hero .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-hero .hero-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .faq-hero .hero-title .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .faq-hero .hero-subtitle {
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           FAQ FILTER SECTION
+           ============================================ */
+        .faq-filter-wrap {
+            padding: 2rem 0;
+            background: rgba(10, 10, 15, 0.5);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 70px;
+            z-index: 50;
+        }
+
+        .faq-filter-wrap .filter-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .faq-filter-wrap .search-wrapper {
+            flex: 1;
+            min-width: 200px;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .faq-filter-wrap .search-wrapper input {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .faq-filter-wrap .search-wrapper input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .faq-filter-wrap .search-wrapper input:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .faq-filter-wrap .search-wrapper .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .faq-filter-wrap .result-count {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+            padding: 0.3rem 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* ============================================
+           FAQ ACCORDION SECTION
+           ============================================ */
+        .faq-accordion-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A0F 0%, #14141E 50%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-accordion-wrap .fa-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .faq-accordion-wrap .fa-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 1s;
+        }
+
+        .faq-accordion-wrap .fa-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 4s;
+        }
+
+        .faq-accordion-wrap .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faq-accordion-wrap .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion-wrap .faq-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-accordion-wrap .faq-item.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(108, 60, 225, 0.05);
+        }
+
+        .faq-accordion-wrap .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: transparent;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-family: var(--font-primary);
+            transition: all 0.3s ease;
+            gap: 1rem;
+        }
+
+        .faq-accordion-wrap .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-accordion-wrap .faq-question .question-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: rgba(108, 60, 225, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .faq-accordion-wrap .faq-item.active .faq-question .question-icon {
+            background: var(--primary);
+            color: #FFFFFF;
+        }
+
+        .faq-accordion-wrap .faq-question .question-text {
+            flex: 1;
+        }
+
+        .faq-accordion-wrap .faq-question .arrow {
+            flex-shrink: 0;
+            color: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .faq-accordion-wrap .faq-item.active .faq-question .arrow {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        .faq-accordion-wrap .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-accordion-wrap .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.2rem;
+        }
+
+        .faq-accordion-wrap .faq-answer p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ============================================
+           STILL HAVE QUESTIONS SECTION
+           ============================================ */
+        .still-questions-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(200deg, #0D0D1A 0%, #1A0A2E 40%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .still-questions-wrap .sq-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .still-questions-wrap .sq-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 2s;
+        }
+
+        .still-questions-wrap .sq-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--primary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 5s;
+        }
+
+        .still-questions-wrap .sq-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+        .still-questions-wrap .sq-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .still-questions-wrap .sq-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .still-questions-wrap .sq-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .still-questions-wrap .sq-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .still-questions-wrap .sq-card .btn-contact {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .still-questions-wrap .sq-card .btn-contact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.4);
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-faq-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A0A2E 40%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-faq-wrap .cta-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.08;
+        }
+
+        .cta-faq-wrap .cta-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -20%;
+            right: -10%;
+            animation: orbFloat 14s ease-in-out infinite 1s;
+        }
+
+        .cta-faq-wrap .cta-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -20%;
+            left: -10%;
+            animation: orbFloat 14s ease-in-out infinite 4s;
+        }
+
+        .cta-faq-wrap .cta-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 14s ease-in-out infinite 7s;
+        }
+
+        .cta-faq-wrap .cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-faq-wrap .cta-badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-faq-wrap .cta-heading {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .cta-faq-wrap .cta-heading .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-faq-wrap .cta-sub {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .cta-faq-wrap .cta-button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-faq-wrap .cta-button-group .btn-primary {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 30px rgba(108, 60, 225, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-faq-wrap .cta-button-group .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(108, 60, 225, 0.5);
+        }
+
+        .cta-faq-wrap .cta-button-group .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-faq-wrap .cta-button-group .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .cta-faq-wrap .cta-footer-text {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .cta-faq-wrap .cta-footer-text span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .faq-hero { min-height: 40vh; padding: 4rem 1rem; }
+            .faq-filter-wrap { padding: 1rem 0; top: 60px; }
+            .faq-filter-wrap .filter-container { gap: 0.8rem; }
+            .faq-filter-wrap .search-wrapper { min-width: 100%; max-width: 100%; }
+            .faq-accordion-wrap { padding: 3rem 0; }
+            .faq-accordion-wrap .faq-question { padding: 1rem 1.2rem; font-size: 0.9rem; }
+            .faq-accordion-wrap .faq-answer p { font-size: 0.85rem; }
+            .still-questions-wrap { padding: 3rem 0; }
+            .still-questions-wrap .sq-card { padding: 2rem 1.5rem; margin: 0 1rem; }
+            .still-questions-wrap .sq-card h3 { font-size: 1.2rem; }
+            .cta-faq-wrap { padding: 3rem 0; }
+            .cta-faq-wrap .cta-button-group { flex-direction: column; align-items: center; }
+            .cta-faq-wrap .cta-button-group .btn-primary,
+            .cta-faq-wrap .cta-button-group .btn-secondary { width: 100%; max-width: 300px; justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .faq-hero .hero-title { font-size: 1.6rem; }
+            .faq-hero .hero-subtitle { font-size: 0.85rem; }
+            .faq-accordion-wrap .faq-question { padding: 0.8rem 1rem; font-size: 0.8rem; }
+            .faq-accordion-wrap .faq-answer p { font-size: 0.8rem; }
+            .faq-accordion-wrap .faq-item.active .faq-answer { padding: 0 1rem 1rem; }
+            .still-questions-wrap .sq-card { padding: 1.5rem 1rem; }
+            .still-questions-wrap .sq-card h3 { font-size: 1rem; }
+            .still-questions-wrap .sq-card p { font-size: 0.85rem; }
+            .cta-faq-wrap .cta-heading { font-size: 1.4rem; }
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -30px) scale(1.1); }
+            66% { transform: translate(-30px, 20px) scale(0.9); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading Quickers...</div>
+    <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+    </div>
+</div>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <span class="brand">⚡ Quickers</span>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        
+        <div class="mobile-menu-grid">
+            <a href="index.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=100&h=100&fit=crop" alt="Home" class="item-image" loading="lazy">
+                <span class="item-name">Home</span>
+                <span class="item-desc">Landing page</span>
+            </a>
+            <a href="about.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&h=100&fit=crop" alt="About" class="item-image" loading="lazy">
+                <span class="item-name">About</span>
+                <span class="item-desc">Our story</span>
+            </a>
+            <a href="services.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop" alt="Services" class="item-image" loading="lazy">
+                <span class="item-name">Services</span>
+                <span class="item-desc">What we do</span>
+            </a>
+            <a href="creators.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Creators" class="item-image" loading="lazy">
+                <span class="item-name">Creators</span>
+                <span class="item-desc">Our network</span>
+            </a>
+            <a href="success.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1531746790733-6c0e45bd04f9?w=100&h=100&fit=crop" alt="Success" class="item-image" loading="lazy">
+                <span class="item-name">Success</span>
+                <span class="item-desc">Stories</span>
+            </a>
+            <a href="blog.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=100&h=100&fit=crop" alt="Blog" class="item-image" loading="lazy">
+                <span class="item-name">Blog</span>
+                <span class="item-desc">Articles</span>
+            </a>
+            <a href="faq.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop" alt="FAQ" class="item-image" loading="lazy">
+                <span class="item-name">FAQ</span>
+                <span class="item-desc">Questions</span>
+            </a>
+            <a href="contact.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Contact" class="item-image" loading="lazy">
+                <span class="item-name">Contact</span>
+                <span class="item-desc">Get in touch</span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-footer">
+            <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+                ⚡ Get Started
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-glass">
+            <a href="index.html" class="navbar-brand">
+                <div class="brand-icon">⚡</div>
+                <span>Quickers</span>
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="creators.html">Creators</a></li>
+                <li><a href="success.html">Success</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="contact.html" class="btn btn-primary btn-sm">Get Started</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- ========== FAQ HERO ========== -->
+<!-- ========================================== -->
+<section class="faq-hero">
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+
+    <div class="hero-content">
+        <span class="hero-badge">❓ FAQ</span>
+        <h1 class="hero-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+        </h1>
+        <p class="hero-subtitle">
+            Find answers to the most common questions about Quickers Creator Network. 
+            If you don't see what you're looking for, reach out to us.
+        </p>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== FAQ SEARCH ========== -->
+<!-- ========================================== -->
+<section class="faq-filter-wrap">
+    <div class="container">
+        <div class="filter-container">
+            <div class="search-wrapper">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" id="faqSearch" placeholder="Search for answers...">
+            </div>
+            <span class="result-count" id="faqResultCount">Showing all questions</span>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== FAQ ACCORDION ========== -->
+<!-- ========================================== -->
+<section class="faq-accordion-wrap">
+    <div class="fa-orb"></div>
+    <div class="fa-orb"></div>
+
+    <div class="container">
+        <div class="faq-container" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-question"></i></span>
+                    <span class="question-text">What is Quickers Creator Network?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Quickers Creator Network is a premium platform designed to help TikTok creators grow faster, improve engagement, increase followers organically, connect with brands, monetize content, learn content strategy, receive creator coaching, join a supportive community, and build long-term careers as digital creators.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-dollar-sign"></i></span>
+                    <span class="question-text">How much does Quickers cost?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer a 14-day free trial with no credit card required. After your trial, you can choose from our flexible plans designed to fit creators at every stage of their journey. Contact us for detailed pricing information tailored to your needs.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-handshake"></i></span>
+                    <span class="question-text">How do brand partnerships work?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>We connect creators with brands that align with their content and audience. Our partnership team handles negotiations, campaign management, and ensures fair compensation. You'll get access to exclusive brand opportunities and collaborations.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-chalkboard-user"></i></span>
+                    <span class="question-text">What kind of coaching do you offer?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer personalized 1-on-1 coaching from successful creators who've been where you are. Our coaches provide growth strategies, content feedback, monetization advice, and accountability support. Weekly sessions are tailored to your specific goals.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-users"></i></span>
+                    <span class="question-text">How do I join the Quickers community?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply click "Get Started" on our website and sign up for a free trial. Once you join, you'll get immediate access to our private community, coaching sessions, and all platform features. Our team will guide you through the onboarding process.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="question-text">What results can I expect?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Results vary by creator, but our community average shows 500%+ follower growth, 300%+ engagement increase, and significant income growth. Most creators see meaningful results within the first 3 months of active participation.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-globe"></i></span>
+                    <span class="question-text">Is Quickers only for TikTok creators?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>While we specialize in TikTok creators, our platform and community are beneficial for creators across all social media platforms. Many of our creators also have audiences on Instagram, YouTube, and other platforms. The strategies and resources we offer apply broadly.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-icon"><i class="fas fa-times-circle"></i></span>
+                    <span class="question-text">How do I cancel my membership?</span>
+                    <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>You can cancel your membership at any time by contacting our support team. There are no long-term commitments or cancellation fees. We'll process your cancellation immediately and you'll keep access until the end of your current billing period.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== STILL HAVE QUESTIONS ========== -->
+<!-- ========================================== -->
+<section class="still-questions-wrap">
+    <div class="sq-orb"></div>
+    <div class="sq-orb"></div>
+
+    <div class="container">
+        <div class="sq-card">
+            <span class="icon">💬</span>
+            <h3>Still Have Questions?</h3>
+            <p>Our team is here to help! Reach out to us and we'll get back to you within 24 hours.</p>
+            <a href="contact.html" class="btn-contact">
+                <i class="fas fa-envelope"></i> Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== CTA SECTION ========== -->
+<!-- ========================================== -->
+<section class="cta-faq-wrap">
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+
+    <div class="cta-content">
+        <span class="cta-badge">🚀 Start Your Journey</span>
+        <h2 class="cta-heading">
+            Ready to <span class="gradient-text">Level Up</span><br>Your Creator Career?
+        </h2>
+        <p class="cta-sub">
+            Join thousands of creators already growing their audience and income with Quickers.
+        </p>
+        <div class="cta-button-group">
+            <a href="contact.html" class="btn-primary">
+                <i class="fas fa-rocket"></i> Get Started Free
+            </a>
+            <a href="services.html" class="btn-secondary">
+                <i class="fas fa-cog"></i> Explore Services
+            </a>
+        </div>
+        <p class="cta-footer-text">
+            <span>✨</span> No credit card required · 14-day free trial · 24/7 support <span>✨</span>
+        </p>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="brand">⚡ <span>Quickers</span></div>
+                <p>The premier network for TikTok creators to grow, monetize, and build sustainable careers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="creators.html">Creators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="success.html">Success Stories</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quickers Creator Network. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div class="scroll-progress"></div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script src="assets/js/script.js"></script>
+
+<script>
+// ============================================
+// FAQ ACCORDION
+// ============================================
+(function initFAQAccordion() {
+    const items = document.querySelectorAll('.faq-item');
+    
+    items.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other FAQs
+            items.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('active');
+                }
+            });
+            
+            // Toggle current
+            if (isActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+})();
+
+// ============================================
+// FAQ SEARCH
+// ============================================
+(function initFAQSearch() {
+    const searchInput = document.getElementById('faqSearch');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const resultCount = document.getElementById('faqResultCount');
+    
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase().trim();
+        let visibleCount = 0;
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.question-text').textContent.toLowerCase();
+            const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+            const match = question.includes(searchTerm) || answer.includes(searchTerm);
+            
+            if (match || !searchTerm) {
+                item.style.display = 'block';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        
+        resultCount.textContent = searchTerm ? `Showing ${visibleCount} results` : 'Showing all questions';
+    });
+})();
+</script>
+
+</body>
+</html>
