@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Quickers Creator Network. Learn how we collect, use, and protect your personal information.">
+    <meta name="keywords" content="privacy policy, data protection, creator privacy, terms of service">
+    <title>Privacy Policy - Quickers Creator Network</title>
+    
+    <meta property="og:title" content="Privacy Policy - Quickers Creator Network">
+    <meta property="og:description" content="Learn how Quickers protects your privacy and handles your data.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1200">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- ===== FAVICON - Using logo.JPG from root ===== -->
+    <link rel="icon" type="image/jpg" href="logo.JPG">
+    <link rel="apple-touch-icon" href="logo.JPG">
+    
+    <style>
+        /* ============================================
+           LOGO STYLES
+           ============================================ */
+        .brand-logo-img {
+            height: 40px; /* INCREASED from 32px to 40px */
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+
+        .brand-logo-img-sm {
+            height: 24px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 6px;
+            object-fit: contain;
+        }
+
+        .brand-logo-img-hero {
+            height: 60px;
+            width: auto;
+            display: block;
+            margin: 0 auto 1rem;
+            object-fit: contain;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ============================================
+           PRIVACY PAGE - COMPLETE RESTYLE
+           ============================================ */
+
+        /* --- HERO --- */
+        .privacy-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 1.5rem 4rem;
+            position: relative;
+            background: linear-gradient(160deg, #0A0A12 0%, #12121F 40%, #0A0A12 100%);
+            overflow: hidden;
+        }
+
+        .privacy-hero .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.1;
+        }
+
+        .privacy-hero .hero-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: #6C3CE1;
+            top: -15%;
+            right: -10%;
+            animation: orbFloat 14s ease-in-out infinite;
+        }
+
+        .privacy-hero .hero-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: #EC4899;
+            bottom: -15%;
+            left: -10%;
+            animation: orbFloat 14s ease-in-out infinite 4s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -30px) scale(1.15); }
+            66% { transform: translate(-30px, 30px) scale(0.85); }
+        }
+
+        .privacy-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .privacy-hero .hero-content .hero-badge {
+            display: inline-block;
+            padding: 0.35rem 1.5rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(255,255,255,0.35);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.2rem;
+        }
+
+        .privacy-hero .hero-content h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-hero .hero-content h1 .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .privacy-hero .hero-content .hero-sub {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: rgba(255,255,255,0.4);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* --- CONTENT --- */
+        .privacy-content {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0D0D1A 0%, #121224 50%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .privacy-content .content-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.04;
+        }
+
+        .privacy-content .content-orb:nth-child(1) {
+            width: 450px;
+            height: 450px;
+            background: #6C3CE1;
+            top: -15%;
+            right: -10%;
+            animation: orbFloat 16s ease-in-out infinite 1s;
+        }
+
+        .privacy-content .content-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: #EC4899;
+            bottom: -15%;
+            left: -10%;
+            animation: orbFloat 16s ease-in-out infinite 5s;
+        }
+
+        .privacy-content .privacy-card {
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+        .privacy-content .privacy-card:hover {
+            border-color: rgba(255,255,255,0.08);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .privacy-content .privacy-card .section-block {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .privacy-content .privacy-card .section-block:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .privacy-content .privacy-card .section-block h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.8rem;
+        }
+
+        .privacy-content .privacy-card .section-block h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-content .privacy-card .section-block p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+        }
+
+        .privacy-content .privacy-card .section-block ul {
+            list-style: none;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .privacy-content .privacy-card .section-block ul li {
+            padding: 0.3rem 0;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.45);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .privacy-content .privacy-card .section-block ul li::before {
+            content: '◆';
+            color: #6C3CE1;
+            font-size: 0.5rem;
+            margin-top: 0.3rem;
+            flex-shrink: 0;
+        }
+
+        .privacy-content .privacy-card .section-block strong {
+            color: #FFFFFF;
+        }
+
+        .privacy-content .privacy-card .section-block .contact-info {
+            margin-top: 0.5rem;
+        }
+
+        .privacy-content .privacy-card .section-block .contact-info li {
+            padding: 0.2rem 0;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* --- CTA --- */
+        .privacy-cta {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A12 0%, #12121F 40%, #0A0A12 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .privacy-cta .cta-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.08;
+        }
+
+        .privacy-cta .cta-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: #6C3CE1;
+            top: -20%;
+            right: -10%;
+            animation: orbFloat 16s ease-in-out infinite 2s;
+        }
+
+        .privacy-cta .cta-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: #EC4899;
+            bottom: -20%;
+            left: -10%;
+            animation: orbFloat 16s ease-in-out infinite 6s;
+        }
+
+        .privacy-cta .cta-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: #06B6D4;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 16s ease-in-out infinite 10s;
+        }
+
+        .privacy-cta .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .privacy-cta .cta-content .cta-badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 50px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255,255,255,0.3);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.2rem;
+        }
+
+        .privacy-cta .cta-content h2 {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-cta .cta-content h2 .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .privacy-cta .cta-content .cta-sub {
+            font-size: clamp(1rem, 1.1vw, 1.1rem);
+            color: rgba(255,255,255,0.4);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .privacy-cta .cta-content .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .privacy-cta .cta-content .btn-group .btn-primary {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 30px rgba(108,60,225,0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-primary);
+        }
+
+        .privacy-cta .cta-content .btn-group .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(108,60,225,0.4);
+        }
+
+        .privacy-cta .cta-content .btn-group .btn-secondary {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-primary);
+        }
+
+        .privacy-cta .cta-content .btn-group .btn-secondary:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.12);
+            transform: translateY(-3px);
+        }
+
+        .privacy-cta .cta-content .cta-footer {
+            margin-top: 1.5rem;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.2);
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .privacy-cta .cta-content .cta-footer span {
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .privacy-hero { min-height: 30vh; padding: 5rem 1rem 3rem; }
+            .privacy-content { padding: 3rem 0; }
+            .privacy-content .privacy-card { padding: 1.5rem; margin: 0 1rem; }
+            .privacy-content .privacy-card .section-block h3 { font-size: 1.1rem; }
+            .privacy-content .privacy-card .section-block p { font-size: 0.85rem; }
+            .privacy-content .privacy-card .section-block ul li { font-size: 0.8rem; }
+            .privacy-cta { padding: 3rem 0; }
+            .privacy-cta .cta-content .btn-group { flex-direction: column; align-items: center; }
+            .privacy-cta .cta-content .btn-group .btn-primary,
+            .privacy-cta .cta-content .btn-group .btn-secondary { width: 100%; max-width: 300px; justify-content: center; }
+            
+            .brand-logo-img-hero { height: 45px; }
+            .brand-logo-img { height: 32px; }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-hero .hero-content h1 { font-size: 1.6rem; }
+            .privacy-hero .hero-content .hero-sub { font-size: 0.85rem; }
+            .privacy-content .privacy-card { padding: 1rem; }
+            .privacy-content .privacy-card .section-block h3 { font-size: 1rem; }
+            .privacy-content .privacy-card .section-block p { font-size: 0.8rem; }
+            .privacy-cta .cta-content h2 { font-size: 1.4rem; }
+            
+            .brand-logo-img-hero { height: 35px; }
+            .brand-logo-img { height: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading Quickers...</div>
+    <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+    </div>
+</div>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <!-- ===== LOGO.JPG ONLY - Removed "Quickers" text ===== -->
+            <span class="brand">
+                <img src="logo.JPG" alt="Quickers" class="brand-logo-img-sm">
+            </span>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        
+        <div class="mobile-menu-grid">
+            <a href="index.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=100&h=100&fit=crop" alt="Home" class="item-image" loading="lazy">
+                <span class="item-name">Home</span>
+                <span class="item-desc">Landing page</span>
+            </a>
+            <a href="about.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&h=100&fit=crop" alt="About" class="item-image" loading="lazy">
+                <span class="item-name">About</span>
+                <span class="item-desc">Our story</span>
+            </a>
+            <a href="services.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop" alt="Services" class="item-image" loading="lazy">
+                <span class="item-name">Services</span>
+                <span class="item-desc">What we do</span>
+            </a>
+            <a href="creators.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Creators" class="item-image" loading="lazy">
+                <span class="item-name">Creators</span>
+                <span class="item-desc">Our network</span>
+            </a>
+            <a href="success.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1531746790733-6c0e45bd04f9?w=100&h=100&fit=crop" alt="Success" class="item-image" loading="lazy">
+                <span class="item-name">Success</span>
+                <span class="item-desc">Stories</span>
+            </a>
+            <a href="blog.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=100&h=100&fit=crop" alt="Blog" class="item-image" loading="lazy">
+                <span class="item-name">Blog</span>
+                <span class="item-desc">Articles</span>
+            </a>
+            <a href="faq.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop" alt="FAQ" class="item-image" loading="lazy">
+                <span class="item-name">FAQ</span>
+                <span class="item-desc">Questions</span>
+            </a>
+            <a href="contact.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Contact" class="item-image" loading="lazy">
+                <span class="item-name">Contact</span>
+                <span class="item-desc">Get in touch</span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-footer">
+            <!-- ===== CHANGED: "Get Started" → "Join Network" + link to creators.html ===== -->
+            <a href="creators.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+                🤝 Join Network
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-glass">
+            <!-- ===== LOGO.JPG ONLY - Removed "Quickers" text, logo is now bigger (40px) ===== -->
+            <a href="index.html" class="navbar-brand">
+                <div class="brand-icon">
+                    <img src="logo.JPG" alt="Quickers" class="brand-logo-img">
+                </div>
+                <!-- "Quickers" text removed -->
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="creators.html">Creators</a></li>
+                <li><a href="success.html">Success</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- ===== CHANGED: "Get Started" → "Join Network" + link to creators.html ===== -->
+                <li><a href="creators.html" class="btn btn-primary btn-sm">🤝 Join Network</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- ========== PRIVACY HERO ========== -->
+<!-- ========================================== -->
+<section class="privacy-hero">
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+
+    <div class="hero-content">
+        <!-- ===== HERO LOGO ===== -->
+        <img src="logo.JPG" alt="Quickers Creator Network" class="brand-logo-img-hero">
+        <span class="hero-badge">🔒 Legal</span>
+        <h1>Privacy <span class="gradient-text">Policy</span></h1>
+        <p class="hero-sub">Last updated: March 2026</p>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== PRIVACY CONTENT ========== -->
+<!-- ========================================== -->
+<section class="privacy-content">
+    <div class="content-orb"></div>
+    <div class="content-orb"></div>
+
+    <div class="container">
+        <div class="privacy-card">
+
+            <!-- Section 1 -->
+            <div class="section-block">
+                <h3>1. Introduction</h3>
+                <p>
+                    At Quickers Creator Network ("Quickers", "we", "our", "us"), we take your privacy seriously. 
+                    This Privacy Policy explains how we collect, use, disclose, and safeguard your information 
+                    when you visit our website and use our services.
+                </p>
+                <p style="margin-top: 0.8rem;">
+                    Please read this Privacy Policy carefully. By using our services, you agree to the collection 
+                    and use of information in accordance with this policy.
+                </p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="section-block">
+                <h3>2. Information We Collect</h3>
+                <h5>Personal Information</h5>
+                <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                <ul>
+                    <li>Create an account on our platform</li>
+                    <li>Subscribe to our newsletter</li>
+                    <li>Fill out a contact or registration form</li>
+                    <li>Participate in our community forums</li>
+                    <li>Apply for brand partnerships</li>
+                </ul>
+                <p style="margin-top: 1rem;">The personal information we collect may include:</p>
+                <ul>
+                    <li>Name and contact information (email address, phone number)</li>
+                    <li>Social media handles and follower counts</li>
+                    <li>Content preferences and creator category</li>
+                    <li>Payment information (for premium services)</li>
+                </ul>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="section-block">
+                <h3>3. How We Use Your Information</h3>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, maintain, and improve our services</li>
+                    <li>Connect creators with brand partnerships</li>
+                    <li>Send you updates, newsletters, and promotional materials</li>
+                    <li>Respond to your inquiries and provide support</li>
+                    <li>Analyze usage patterns to improve user experience</li>
+                    <li>Ensure the security and integrity of our platform</li>
+                </ul>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="section-block">
+                <h3>4. Information Sharing</h3>
+                <p>We do not sell, trade, or rent your personal information to third parties. However, we may share your information in the following circumstances:</p>
+                <ul>
+                    <li>With brands and partners (with your consent) for collaboration opportunities</li>
+                    <li>With service providers who assist in operating our platform</li>
+                    <li>To comply with legal obligations or protect our rights</li>
+                    <li>In connection with a business transfer (merger, acquisition, or sale)</li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="section-block">
+                <h3>5. Data Security</h3>
+                <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These include:</p>
+                <ul>
+                    <li>SSL/TLS encryption for data transmission</li>
+                    <li>Secure servers with firewalls and access controls</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Staff training on data protection practices</li>
+                </ul>
+                <p style="margin-top: 0.8rem;">
+                    While we strive to protect your personal information, no transmission over the internet is 
+                    100% secure, and we cannot guarantee absolute security.
+                </p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="section-block">
+                <h3>6. Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access the personal information we hold about you</li>
+                    <li>Request correction of inaccurate information</li>
+                    <li>Request deletion of your personal information</li>
+                    <li>Opt-out of marketing communications</li>
+                    <li>Withdraw consent at any time</li>
+                </ul>
+                <p style="margin-top: 0.8rem;">
+                    To exercise any of these rights, please contact us at <strong>hello@quickers.com</strong>.
+                </p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="section-block">
+                <h3>7. Cookies and Tracking</h3>
+                <p>We use cookies and similar tracking technologies to enhance your experience on our platform. Cookies are small files stored on your device that help us:</p>
+                <ul>
+                    <li>Remember your preferences and settings</li>
+                    <li>Analyze site traffic and usage patterns</li>
+                    <li>Personalize content and recommendations</li>
+                </ul>
+                <p style="margin-top: 0.8rem;">
+                    You can control cookie preferences through your browser settings. However, disabling cookies 
+                    may affect the functionality of our platform.
+                </p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="section-block">
+                <h3>8. Children's Privacy</h3>
+                <p>Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete it.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="section-block">
+                <h3>9. Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="section-block">
+                <h3>10. Contact Us</h3>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+                <ul class="contact-info">
+                    <li>📧 Email: <strong>hello@quickers.com</strong></li>
+                    <li>📍 Address: 123 Creator Lane, Los Angeles, CA 90001</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== CTA SECTION ========== -->
+<!-- ========================================== -->
+<section class="privacy-cta">
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+
+    <div class="cta-content">
+        <span class="cta-badge">🚀 Start Your Journey</span>
+        <h2>Ready to <span class="gradient-text">Level Up</span><br>Your Creator Career?</h2>
+        <p class="cta-sub">Join thousands of creators already growing their audience and income with Quickers.</p>
+        <div class="btn-group">
+            <!-- ===== CHANGED: "Get Started Free" → "Join Network Free" + link to creators.html ===== -->
+            <a href="creators.html" class="btn-primary">
+                <i class="fas fa-rocket"></i> Join Network Free
+            </a>
+            <a href="services.html" class="btn-secondary">
+                <i class="fas fa-cog"></i> Explore Services
+            </a>
+        </div>
+        <p class="cta-footer"><span>✨</span> No credit card required · 14-day free trial · 24/7 support <span>✨</span></p>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <!-- ===== LOGO.JPG with text (keeping brand name in footer for SEO) ===== -->
+                <div class="brand">
+                    <img src="logo.JPG" alt="Quickers" class="brand-logo-img-sm">
+                    <span>Quickers</span>
+                </div>
+                <p>The premier network for TikTok creators to grow, monetize, and build sustainable careers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="creators.html">Creators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="success.html">Success Stories</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quickers Creator Network. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div class="scroll-progress"></div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

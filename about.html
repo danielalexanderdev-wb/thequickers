@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Quickers Creator Network - The premier platform for TikTok creators to grow, monetize, and succeed.">
+    <meta name="keywords" content="about Quickers, creator network, TikTok creators, social media growth, influencer platform">
+    <title>About Us - Quickers Creator Network</title>
+    
+    <meta property="og:title" content="About Quickers Creator Network">
+    <meta property="og:description" content="Learn about the premier platform for TikTok creators to grow, monetize, and build sustainable careers.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- ===== FAVICON - Using logo.JPG from root ===== -->
+    <link rel="icon" type="image/jpg" href="logo.JPG">
+    <link rel="apple-touch-icon" href="logo.JPG">
+    
+    <style>
+        /* ============================================
+           LOGO STYLES - BIGGER, NO TEXT
+           ============================================ */
+        .brand-logo-img {
+            height: 50px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0;
+            object-fit: contain;
+        }
+
+        .brand-logo-img-sm {
+            height: 40px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0;
+            object-fit: contain;
+        }
+
+        .brand-logo-img-lg {
+            height: 60px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0;
+            object-fit: contain;
+        }
+
+        .brand-logo-img-hero {
+            height: 80px;
+            width: auto;
+            display: block;
+            margin: 0 auto 1rem;
+            object-fit: contain;
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        /* Remove text next to logos */
+        .navbar-brand span,
+        .brand span,
+        .footer-brand .brand span {
+            display: none !important;
+        }
+
+        /* Navigation logo container - adjust spacing */
+        .navbar-brand .brand-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand .brand-icon img {
+            height: 50px;
+            width: auto;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* ============================================
+           GLITCHY FONT STYLES
+           ============================================ */
+        .glitch-text {
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .glitch-text::before {
+            animation: glitch-before 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+            color: var(--primary);
+        }
+        
+        .glitch-text::after {
+            animation: glitch-after 1.5s infinite linear alternate-reverse;
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+            color: var(--secondary);
+        }
+        
+        @keyframes glitch-before {
+            0% { transform: translate(0); opacity: 0.8; }
+            20% { transform: translate(-2px, 1px); opacity: 1; }
+            40% { transform: translate(2px, -1px); opacity: 0.6; }
+            60% { transform: translate(-1px, 2px); opacity: 0.9; }
+            80% { transform: translate(1px, -2px); opacity: 0.7; }
+            100% { transform: translate(0); opacity: 0.8; }
+        }
+        
+        @keyframes glitch-after {
+            0% { transform: translate(0); opacity: 0.6; }
+            20% { transform: translate(1px, -1px); opacity: 1; }
+            40% { transform: translate(-1px, 2px); opacity: 0.5; }
+            60% { transform: translate(2px, 1px); opacity: 0.8; }
+            80% { transform: translate(-2px, -1px); opacity: 0.6; }
+            100% { transform: translate(0); opacity: 0.6; }
+        }
+
+        /* ============================================
+           NEW SECTION STYLES
+           ============================================ */
+
+        /* --- SECTION 1: MISSION & VISION --- */
+        .mission-vision-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A0F 0%, #14141E 50%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-vision-wrap .mv-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.08;
+        }
+
+        .mission-vision-wrap .mv-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 10s ease-in-out infinite;
+        }
+
+        .mission-vision-wrap .mv-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 10s ease-in-out infinite 3s;
+        }
+
+        .mission-vision-wrap .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mission-vision-wrap .mv-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-vision-wrap .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 0% 0%, rgba(108,60,225,0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .mission-vision-wrap .mv-card:hover::before {
+            opacity: 1;
+        }
+
+        .mission-vision-wrap .mv-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .mission-vision-wrap .mv-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .mission-vision-wrap .mv-card h3 {
+            font-size: clamp(1.3rem, 1.8vw, 1.8rem);
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .mission-vision-wrap .mv-card p {
+            font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        /* --- SECTION 2: TIMELINE --- */
+        .timeline-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(200deg, #0D0D1A 0%, #1A0A2E 40%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-wrap .tl-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .timeline-wrap .tl-orb:nth-child(1) {
+            width: 450px;
+            height: 450px;
+            background: var(--secondary);
+            top: -15%;
+            right: -8%;
+            animation: orbFloat 12s ease-in-out infinite 2s;
+        }
+
+        .timeline-wrap .tl-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--accent);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 5s;
+        }
+
+        .timeline-wrap .tl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-wrap .tl-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 1.8rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .timeline-wrap .tl-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .timeline-wrap .tl-card .year {
+            font-size: 0.7rem;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: 'Courier New', monospace;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background: rgba(108,60,225,0.15);
+            border-radius: 9999px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-wrap .tl-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .timeline-wrap .tl-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-wrap .tl-card p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        /* --- SECTION 3: TEAM --- */
+        .team-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A0F 0%, #14141E 50%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-wrap .team-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .team-wrap .team-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 10s ease-in-out infinite 1s;
+        }
+
+        .team-wrap .team-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 10s ease-in-out infinite 4s;
+        }
+
+        .team-wrap .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .team-wrap .team-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 20px;
+            padding: 1.8rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .team-wrap .team-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-wrap .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0.8rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .team-wrap .team-card:hover img {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .team-wrap .team-card h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .team-wrap .team-card .role {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .team-wrap .team-card .bio {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 0.3rem;
+            line-height: 1.5;
+        }
+
+        /* --- SECTION 4: VALUES --- */
+        .values-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(200deg, #0D0D1A 0%, #1A0A2E 40%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .values-wrap .val-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .values-wrap .val-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 3s;
+        }
+
+        .values-wrap .val-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--primary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 6s;
+        }
+
+        .values-wrap .val-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .values-wrap .val-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .values-wrap .val-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .values-wrap .val-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .values-wrap .val-card h5 {
+            font-size: clamp(0.95rem, 1vw, 1.05rem);
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .values-wrap .val-card p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.4;
+            margin-top: 0.2rem;
+        }
+
+        /* --- SECTION 5: STATISTICS --- */
+        .stats-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(160deg, #0A0A0F 0%, #14141E 50%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-wrap .st-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.06;
+        }
+
+        .stats-wrap .st-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--secondary);
+            top: -15%;
+            right: -5%;
+            animation: orbFloat 14s ease-in-out infinite 2s;
+        }
+
+        .stats-wrap .st-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--accent);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 14s ease-in-out infinite 5s;
+        }
+
+        .stats-wrap .st-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-wrap .st-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.4s ease;
+        }
+
+        .stats-wrap .st-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .stats-wrap .st-item .number {
+            font-size: clamp(2rem, 2.5vw, 3rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stats-wrap .st-item p {
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 0.2rem;
+        }
+
+        /* --- SECTION 6: WHY CHOOSE QUICKERS --- */
+        .why-quickers-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(200deg, #0D0D1A 0%, #1A0A2E 40%, #0D0D1A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-quickers-wrap .wq-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.08;
+        }
+
+        .why-quickers-wrap .wq-orb:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -10%;
+            right: -5%;
+            animation: orbFloat 12s ease-in-out infinite 1s;
+        }
+
+        .why-quickers-wrap .wq-orb:nth-child(2) {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            bottom: -10%;
+            left: -5%;
+            animation: orbFloat 12s ease-in-out infinite 4s;
+        }
+
+        .why-quickers-wrap .wq-orb:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 12s ease-in-out infinite 7s;
+        }
+
+        .why-quickers-wrap .wq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-quickers-wrap .wq-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 1.8rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-quickers-wrap .wq-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .why-quickers-wrap .wq-card:hover::before {
+            opacity: 1;
+        }
+
+        .why-quickers-wrap .wq-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .why-quickers-wrap .wq-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .why-quickers-wrap .wq-card h5 {
+            font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .why-quickers-wrap .wq-card p {
+            font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        /* --- SECTION 7: CTA --- */
+        .cta-ready-wrap {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #0A0A0F 0%, #1A0A2E 40%, #0A0A0F 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-ready-wrap .cta-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.08;
+        }
+
+        .cta-ready-wrap .cta-orb:nth-child(1) {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -20%;
+            right: -10%;
+            animation: orbFloat 14s ease-in-out infinite 1s;
+        }
+
+        .cta-ready-wrap .cta-orb:nth-child(2) {
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            bottom: -20%;
+            left: -10%;
+            animation: orbFloat 14s ease-in-out infinite 4s;
+        }
+
+        .cta-ready-wrap .cta-orb:nth-child(3) {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbFloat 14s ease-in-out infinite 7s;
+        }
+
+        .cta-ready-wrap .cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-ready-wrap .cta-badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 1.2rem;
+        }
+
+        .cta-ready-wrap .cta-heading {
+            font-size: clamp(2rem, 3.5vw, 3.5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .cta-ready-wrap .cta-heading .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-ready-wrap .cta-sub {
+            font-size: clamp(1rem, 1.1vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .cta-ready-wrap .cta-button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-ready-wrap .cta-button-group .btn-primary {
+            background: linear-gradient(135deg, #6C3CE1, #8B5CF6);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 30px rgba(108, 60, 225, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-ready-wrap .cta-button-group .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(108, 60, 225, 0.5);
+        }
+
+        .cta-ready-wrap .cta-button-group .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 0.8rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-ready-wrap .cta-button-group .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .cta-ready-wrap .cta-footer-text {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.25);
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .cta-ready-wrap .cta-footer-text span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* --- SECTION HEADERS --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-header .badge {
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 0.8rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-header .gradient-text {
+            background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.4);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .mission-vision-wrap .mv-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .mission-vision-wrap .mv-card {
+                padding: 1.5rem;
+            }
+
+            .stats-wrap .st-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .cta-ready-wrap .cta-button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-ready-wrap .cta-button-group .btn-primary,
+            .cta-ready-wrap .cta-button-group .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .mission-vision-wrap,
+            .timeline-wrap,
+            .team-wrap,
+            .values-wrap,
+            .stats-wrap,
+            .why-quickers-wrap,
+            .cta-ready-wrap {
+                padding: 3rem 0;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .team-wrap .team-card img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .timeline-wrap .tl-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .values-wrap .val-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
+            }
+
+            .why-quickers-wrap .wq-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .brand-logo-img-hero {
+                height: 60px;
+            }
+
+            .brand-logo-img {
+                height: 40px;
+            }
+
+            .brand-logo-img-sm {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mission-vision-wrap .mv-card {
+                padding: 1.2rem;
+            }
+
+            .mission-vision-wrap .mv-card h3 {
+                font-size: 1rem;
+            }
+
+            .mission-vision-wrap .mv-card p {
+                font-size: 0.8rem;
+            }
+
+            .stats-wrap .st-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .stats-wrap .st-item .number {
+                font-size: 1.5rem;
+            }
+
+            .stats-wrap .st-item p {
+                font-size: 0.65rem;
+            }
+
+            .timeline-wrap .tl-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
+            }
+
+            .timeline-wrap .tl-card {
+                padding: 1rem;
+            }
+
+            .timeline-wrap .tl-card h4 {
+                font-size: 0.9rem;
+            }
+
+            .timeline-wrap .tl-card p {
+                font-size: 0.75rem;
+            }
+
+            .team-wrap .team-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .team-wrap .team-card {
+                padding: 1rem;
+            }
+
+            .team-wrap .team-card img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .team-wrap .team-card h4 {
+                font-size: 0.85rem;
+            }
+
+            .team-wrap .team-card .bio {
+                font-size: 0.7rem;
+            }
+
+            .values-wrap .val-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.4rem;
+            }
+
+            .values-wrap .val-card {
+                padding: 0.8rem;
+            }
+
+            .values-wrap .val-card h5 {
+                font-size: 0.8rem;
+            }
+
+            .values-wrap .val-card p {
+                font-size: 0.7rem;
+            }
+
+            .why-quickers-wrap .wq-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.6rem;
+            }
+
+            .why-quickers-wrap .wq-card {
+                padding: 0.8rem;
+            }
+
+            .why-quickers-wrap .wq-card h5 {
+                font-size: 0.8rem;
+            }
+
+            .why-quickers-wrap .wq-card p {
+                font-size: 0.7rem;
+            }
+
+            .why-quickers-wrap .wq-card .icon {
+                font-size: 1.3rem;
+            }
+
+            .cta-ready-wrap .cta-heading {
+                font-size: 1.6rem;
+            }
+
+            .brand-logo-img-hero {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-spinner"></div>
+    <div class="loader-text">Loading Quickers...</div>
+    <div class="loader-progress">
+        <div class="loader-progress-bar"></div>
+    </div>
+</div>
+
+<!-- ========== MOBILE MENU ========== -->
+<div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+            <!-- ===== LOGO ONLY - BIGGER, NO TEXT ===== -->
+            <span class="brand">
+                <img src="logo.JPG" alt="Quickers" class="brand-logo-img-sm">
+                <!-- "Quickers" text removed -->
+            </span>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        
+        <div class="mobile-menu-grid">
+            <a href="index.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=100&h=100&fit=crop" alt="Home" class="item-image" loading="lazy">
+                <span class="item-name">Home</span>
+                <span class="item-desc">Landing page</span>
+            </a>
+            <a href="about.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=100&h=100&fit=crop" alt="About" class="item-image" loading="lazy">
+                <span class="item-name">About</span>
+                <span class="item-desc">Our story</span>
+            </a>
+            <a href="services.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=100&h=100&fit=crop" alt="Services" class="item-image" loading="lazy">
+                <span class="item-name">Services</span>
+                <span class="item-desc">What we do</span>
+            </a>
+            <a href="creators.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Creators" class="item-image" loading="lazy">
+                <span class="item-name">Creators</span>
+                <span class="item-desc">Our network</span>
+            </a>
+            <a href="success.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1531746790733-6c0e45bd04f9?w=100&h=100&fit=crop" alt="Success" class="item-image" loading="lazy">
+                <span class="item-name">Success</span>
+                <span class="item-desc">Stories</span>
+            </a>
+            <a href="blog.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1432889821006-ca4f4a279a3b?w=100&h=100&fit=crop" alt="Blog" class="item-image" loading="lazy">
+                <span class="item-name">Blog</span>
+                <span class="item-desc">Articles</span>
+            </a>
+            <a href="faq.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=100&h=100&fit=crop" alt="FAQ" class="item-image" loading="lazy">
+                <span class="item-name">FAQ</span>
+                <span class="item-desc">Questions</span>
+            </a>
+            <a href="contact.html" class="mobile-menu-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Contact" class="item-image" loading="lazy">
+                <span class="item-name">Contact</span>
+                <span class="item-desc">Get in touch</span>
+            </a>
+        </div>
+        
+        <div class="mobile-menu-footer">
+            <a href="creators.html" class="btn btn-primary" style="width:100%; justify-content:center;">
+                ⚡ Join Network
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-glass">
+            <!-- ===== LOGO ONLY - BIGGER, NO TEXT ===== -->
+            <a href="index.html" class="navbar-brand">
+                <div class="brand-icon">
+                    <img src="logo.JPG" alt="Quickers" class="brand-logo-img">
+                </div>
+                <!-- "Quickers" text removed -->
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="creators.html">Creators</a></li>
+                <li><a href="success.html">Success</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="creators.html" class="btn btn-primary btn-sm">Join Network</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ========== ABOUT HERO ========== -->
+<section class="hero" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 1.5rem; position: relative; background: linear-gradient(135deg, #0A0A0F 0%, #1A1A2E 50%, #0A0A0F 100%); overflow: hidden;">
+
+    <div style="position: absolute; width: 500px; height: 500px; background: rgba(108,60,225,0.12); border-radius: 50%; top: -10%; right: -5%; filter: blur(100px); animation: orbFloat 10s ease-in-out infinite;"></div>
+    <div style="position: absolute; width: 400px; height: 400px; background: rgba(236,72,153,0.10); border-radius: 50%; bottom: -10%; left: -5%; filter: blur(100px); animation: orbFloat 10s ease-in-out infinite 3s;"></div>
+    <div style="position: absolute; width: 300px; height: 300px; background: rgba(6,182,212,0.08); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%, -50%); filter: blur(100px); animation: orbFloat 10s ease-in-out infinite 6s;"></div>
+
+    <div style="position: relative; z-index: 10; max-width: 800px;">
+        <!-- ===== HERO LOGO - BIGGER ===== -->
+        <img src="logo.JPG" alt="Quickers Creator Network" class="brand-logo-img-hero">
+        
+        <h1 class="glitch-text" data-text="BUILDING THE FUTURE" style="font-size: clamp(2.2rem, 4.5vw, 3.8rem); font-weight: 700; color: white; line-height: 1.2; margin-bottom: 1rem; position: relative;">
+            BUILDING THE FUTURE OF<br>
+            <span style="background: linear-gradient(135deg, #6C3CE1, #EC4899, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">CREATOR ECONOMY</span>
+        </h1>
+        
+        <p style="font-size: clamp(1rem, 1.2vw, 1.2rem); color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; line-height: 1.8; font-weight: 300;">
+            We're on a mission to empower TikTok creators worldwide with the tools, 
+            connections, and support they need to build sustainable careers.
+        </p>
+        
+        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.35); margin-top: 1.5rem; letter-spacing: 1px; font-family: 'Courier New', monospace;">
+            Founded in 2022 · 15,000+ creators · 250+ brand partners
+        </p>
+    </div>
+
+    <div style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.3rem; color: rgba(255,255,255,0.3); font-size: 0.7rem; animation: bounceDown 2s ease-in-out infinite; z-index: 10; font-family: 'Courier New', monospace;">
+        <div style="width: 20px; height: 32px; border: 2px solid rgba(255,255,255,0.2); border-radius: 9999px; position: relative;">
+            <div style="width: 4px; height: 8px; background: rgba(255,255,255,0.3); border-radius: 9999px; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); animation: scrollWheel 1.5s ease-in-out infinite;"></div>
+        </div>
+        <span>SCROLL</span>
+    </div>
+</section>
+
+<style>
+    @keyframes orbFloat {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(40px, -30px) scale(1.1); }
+        66% { transform: translate(-30px, 20px) scale(0.9); }
+    }
+    @keyframes scrollWheel {
+        0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+        50% { transform: translateX(-50%) translateY(8px); opacity: 0.3; }
+    }
+    @keyframes bounceDown {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(6px); }
+    }
+</style>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 1: MISSION & VISION ========== -->
+<!-- ========================================== -->
+<section class="mission-vision-wrap">
+    <div class="mv-orb"></div>
+    <div class="mv-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Our Foundation</span>
+            <h2>Mission &amp; <span class="gradient-text">Vision</span></h2>
+            <p>What drives us and where we're headed.</p>
+        </div>
+
+        <div class="mv-grid">
+            <div class="mv-card">
+                <span class="icon">🚀</span>
+                <h3>Our Mission</h3>
+                <p>
+                    To democratize creator success by providing every TikTok creator 
+                    with the tools, education, and opportunities to turn their passion 
+                    into a thriving career.
+                </p>
+            </div>
+            <div class="mv-card">
+                <span class="icon">👁️</span>
+                <h3>Our Vision</h3>
+                <p>
+                    A world where every creator has the resources and support to build 
+                    a sustainable, fulfilling career doing what they love on their own terms.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 2: TIMELINE ========== -->
+<!-- ========================================== -->
+<section class="timeline-wrap">
+    <div class="tl-orb"></div>
+    <div class="tl-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Our Journey</span>
+            <h2>The <span class="gradient-text">Quickers Story</span></h2>
+            <p>From a small community to the premier creator network.</p>
+        </div>
+
+        <div class="tl-grid">
+            <div class="tl-card">
+                <span class="icon">🌟</span>
+                <span class="year">2022</span>
+                <h4>Founded</h4>
+                <p>Quickers launched with 100 founding creators.</p>
+            </div>
+            <div class="tl-card">
+                <span class="icon">📈</span>
+                <span class="year">2023</span>
+                <h4>Growth</h4>
+                <p>Reached 5,000 creators and 100M+ combined followers.</p>
+            </div>
+            <div class="tl-card">
+                <span class="icon">🤝</span>
+                <span class="year">2024</span>
+                <h4>Partnerships</h4>
+                <p>Partnered with 150+ brands for creator collaborations.</p>
+            </div>
+            <div class="tl-card">
+                <span class="icon">🏆</span>
+                <span class="year">2026</span>
+                <h4>Leading</h4>
+                <p>15,000+ creators, 500M+ views, 250+ brand partners.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 3: TEAM ========== -->
+<!-- ========================================== -->
+<section class="team-wrap">
+    <div class="team-orb"></div>
+    <div class="team-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Meet the Team</span>
+            <h2>The People Behind <span class="gradient-text">Quickers</span></h2>
+            <p>Passionate creators and industry experts dedicated to your success.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face" alt="Sarah Chen" loading="lazy">
+                <h4>Sarah Chen</h4>
+                <p class="role">CEO &amp; Co-Founder</p>
+                <p class="bio">Former TikTok creator with 2M+ followers, passionate about creator empowerment.</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Marcus Johnson" loading="lazy">
+                <h4>Marcus Johnson</h4>
+                <p class="role">Head of Creator Success</p>
+                <p class="bio">Built creator programs at major platforms, helping 1,000+ creators grow.</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1494790108372-be9c29b29330?w=200&h=200&fit=crop&crop=face" alt="Emily Rodriguez" loading="lazy">
+                <h4>Emily Rodriguez</h4>
+                <p class="role">Director of Partnerships</p>
+                <p class="bio">Secured 250+ brand partnerships, generating $5M+ for creators.</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face" alt="David Kim" loading="lazy">
+                <h4>David Kim</h4>
+                <p class="role">Head of Product</p>
+                <p class="bio">Former product lead at a major creator platform, obsessed with user experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 4: VALUES ========== -->
+<!-- ========================================== -->
+<section class="values-wrap">
+    <div class="val-orb"></div>
+    <div class="val-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Our Values</span>
+            <h2>What We <span class="gradient-text">Believe In</span></h2>
+            <p>The principles that guide everything we do at Quickers.</p>
+        </div>
+
+        <div class="val-grid">
+            <div class="val-card">
+                <span class="icon">💪</span>
+                <h5>Creator First</h5>
+                <p>Everything we do is for the benefit of creators.</p>
+            </div>
+            <div class="val-card">
+                <span class="icon">🌟</span>
+                <h5>Excellence</h5>
+                <p>We strive for the highest quality in everything.</p>
+            </div>
+            <div class="val-card">
+                <span class="icon">🤝</span>
+                <h5>Community</h5>
+                <p>We believe in the power of collaboration and support.</p>
+            </div>
+            <div class="val-card">
+                <span class="icon">📈</span>
+                <h5>Growth</h5>
+                <p>We're committed to continuous learning and improvement.</p>
+            </div>
+            <div class="val-card">
+                <span class="icon">🎯</span>
+                <h5>Impact</h5>
+                <p>We measure success by the impact we create for creators.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 5: STATISTICS ========== -->
+<!-- ========================================== -->
+<section class="stats-wrap">
+    <div class="st-orb"></div>
+    <div class="st-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">By the Numbers</span>
+            <h2>Our <span class="gradient-text">Impact</span></h2>
+            <p>Numbers that show the power of the Quickers network.</p>
+        </div>
+
+        <div class="st-grid">
+            <div class="st-item animate-on-scroll">
+                <div class="number" data-counter data-target="15000" data-suffix="+">0</div>
+                <p>Creators</p>
+            </div>
+            <div class="st-item animate-on-scroll delay-1">
+                <div class="number" style="background: linear-gradient(135deg, var(--secondary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" data-counter data-target="500" data-suffix="M+">0</div>
+                <p>Combined Followers</p>
+            </div>
+            <div class="st-item animate-on-scroll delay-2">
+                <div class="number" style="background: linear-gradient(135deg, var(--accent), var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" data-counter data-target="250" data-suffix="+">0</div>
+                <p>Brand Partners</p>
+            </div>
+            <div class="st-item animate-on-scroll delay-3">
+                <div class="number" style="background: linear-gradient(135deg, var(--primary), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" data-counter data-target="100" data-suffix="%">0</div>
+                <p>Creator Satisfaction</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 6: WHY CHOOSE QUICKERS ========== -->
+<!-- ========================================== -->
+<section class="why-quickers-wrap">
+    <div class="wq-orb"></div>
+    <div class="wq-orb"></div>
+    <div class="wq-orb"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Why Choose Quickers</span>
+            <h2>Built for <span class="gradient-text">Creators, By Creators</span></h2>
+            <p>We understand the creator journey because we've been there ourselves.</p>
+        </div>
+
+        <div class="wq-grid">
+            <div class="wq-card">
+                <span class="icon">🎯</span>
+                <h5>Creator-First</h5>
+                <p>Everything we do is designed with creators in mind.</p>
+            </div>
+            <div class="wq-card">
+                <span class="icon">📈</span>
+                <h5>Proven Results</h5>
+                <p>Our methods have generated 500M+ views for creators.</p>
+            </div>
+            <div class="wq-card">
+                <span class="icon">🤝</span>
+                <h5>Trusted Partners</h5>
+                <p>250+ brands trust us to connect with top creators.</p>
+            </div>
+            <div class="wq-card">
+                <span class="icon">💪</span>
+                <h5>100% Support</h5>
+                <p>Dedicated support team available 24/7 for all creators.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- ========== SECTION 7: CTA ========== -->
+<!-- ========================================== -->
+<section class="cta-ready-wrap">
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+    <div class="cta-orb"></div>
+
+    <div class="cta-content">
+        <span class="cta-badge">🚀 Ready to Launch</span>
+        <h2 class="cta-heading">
+            Start Your <br><span class="gradient-text">Creator Journey</span> Today
+        </h2>
+        <p class="cta-sub">
+            Join thousands of creators who are already growing their audience, 
+            building their brand, and earning income with Quickers.
+        </p>
+        <div class="cta-button-group">
+            <a href="creators.html" class="btn-primary">
+                <i class="fas fa-rocket"></i> Join Network
+            </a>
+            <a href="services.html" class="btn-secondary">
+                <i class="fas fa-eye"></i> Explore Services
+            </a>
+        </div>
+        <p class="cta-footer-text">
+            <span>✨</span> No credit card required · 14-day free trial · 24/7 support <span>✨</span>
+        </p>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <!-- ===== LOGO ONLY - BIGGER, NO TEXT ===== -->
+                <div class="brand">
+                    <img src="logo.JPG" alt="Quickers" class="brand-logo-img-sm">
+                    <!-- "Quickers" text removed -->
+                </div>
+                <p>The premier network for TikTok creators to grow, monetize, and build sustainable careers.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="creators.html">Creators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="success.html">Success Stories</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Quickers Creator Network. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ========== SCROLL PROGRESS ========== -->
+<div class="scroll-progress"></div>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>
