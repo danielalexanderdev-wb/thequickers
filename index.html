@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Quickers Creator Network | Global TikTok Creator Network</title>
+  <meta name="description" content="Quickers Creator Network connects TikTok creators with global opportunities, professional support, brand partnerships and an international creator community." />
+  <link rel="canonical" href="https://quickers.network" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Quickers Creator Network | Global TikTok Creator Network" />
+  <meta property="og:description" content="Quickers Creator Network connects TikTok creators with global opportunities, professional support, brand partnerships and an international creator community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://quickers.network" />
+  <meta property="og:image" content="https://quickers.network/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quickers Creator Network | Global TikTok Creator Network" />
+  <meta name="twitter:description" content="Quickers Creator Network connects TikTok creators with global opportunities, professional support, brand partnerships and an international creator community." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== CSS ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #121212;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+      --accent-purple: #8b5cf6;
+      --accent-magenta: #d946ef;
+      --accent-pink: #f472b6;
+      --glass-bg: rgba(255, 255, 255, 0.04);
+      --glass-border: rgba(255, 255, 255, 0.06);
+      --glass-shadow: rgba(0, 0, 0, 0.5);
+      --radius: 24px;
+      --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== LOADER ===== */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .loader-ring {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px solid transparent;
+      border-top: 4px solid var(--accent-purple);
+      border-right: 4px solid var(--accent-magenta);
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 16px 24px;
+      z-index: 1000;
+      transition: var(--transition);
+      background: transparent;
+      backdrop-filter: blur(0px);
+    }
+    nav.scrolled {
+      background: rgba(10, 10, 10, 0.75);
+      backdrop-filter: blur(18px);
+      padding: 10px 24px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-left .logo-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-left .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .nav-left .brand {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.03em;
+    }
+    .nav-left .sub {
+      font-size: 0.6rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      letter-spacing: 0.2px;
+      -webkit-text-fill-color: var(--text-secondary);
+      margin-top: -4px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: var(--transition);
+      position: relative;
+    }
+    .nav-links a:hover {
+      color: #fff;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-purple), var(--accent-magenta));
+      transition: var(--transition);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta));
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 600 !important;
+      transition: var(--transition);
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+    .nav-cta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    }
+    .nav-cta::after { display: none !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 8px;
+    }
+    .hamburger span {
+      width: 28px;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+    /* mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(10, 10, 10, 0.96);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      z-index: 999;
+      transform: translateX(100%);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      padding: 40px;
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+    .mobile-menu a {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover {
+      color: #fff;
+    }
+    .mobile-menu .nav-cta {
+      font-size: 1.2rem;
+      padding: 12px 36px;
+    }
+    .mobile-menu .logo-img-mobile {
+      height: 60px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 60px;
+    }
+    #hero .bg-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%);
+      top: -10%;
+      right: -10%;
+      filter: blur(80px);
+      z-index: 0;
+      animation: floatGlow 12s ease-in-out infinite alternate;
+    }
+    #hero .bg-glow2 {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217,70,239,0.2) 0%, transparent 70%);
+      bottom: -20%;
+      left: -10%;
+      filter: blur(70px);
+      z-index: 0;
+      animation: floatGlow2 15s ease-in-out infinite alternate;
+    }
+    @keyframes floatGlow { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(-40px, 40px) scale(1.1); } }
+    @keyframes floatGlow2 { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(30px, -30px) scale(1.15); } }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-left .badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      backdrop-filter: blur(4px);
+    }
+    .hero-left h1 {
+      font-size: clamp(3.2rem, 8vw, 5.5rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .hero-left h1 span {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta), var(--accent-pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-left p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta));
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 600;
+      transition: var(--transition);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 0 30px rgba(139,92,246,0.25);
+    }
+    .btn-primary:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 50px rgba(139,92,246,0.4);
+    }
+    .btn-secondary {
+      background: transparent;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 500;
+      border: 1px solid var(--glass-border);
+      color: #fff;
+      transition: var(--transition);
+      cursor: pointer;
+      font-size: 1rem;
+      backdrop-filter: blur(4px);
+    }
+    .btn-secondary:hover {
+      background: var(--glass-bg);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .hero-trust {
+      margin-top: 40px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .hero-trust span { opacity: 0.6; }
+
+    .hero-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .hero-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .hero-card:hover { transform: translateY(-6px); border-color: rgba(139,92,246,0.3); }
+    .hero-card .flag-img { width: 40px; height: 30px; object-fit: cover; border-radius: 4px; margin-bottom: 6px; }
+    .hero-card .stat { font-size: 1.8rem; font-weight: 700; background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-card .label { font-size: 0.7rem; color: var(--text-secondary); }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+    .section-sub {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+
+    /* ===== REGIONS ===== */
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .region-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      padding: 18px 14px;
+      text-align: center;
+      transition: var(--transition);
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+      display: block;
+      color: inherit;
+    }
+    .region-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-purple);
+      box-shadow: 0 8px 30px rgba(139,92,246,0.15);
+    }
+    .region-card .flag-img {
+      width: 48px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      border: 1px solid var(--glass-border);
+    }
+    .region-card .name { font-weight: 600; font-size: 0.9rem; }
+    .region-card .status { font-size: 0.7rem; color: var(--text-secondary); margin-top: 4px; }
+
+    .region-header {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 40px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .region-header small {
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+    .region-header .tiktok-link {
+      font-size: 0.8rem;
+      color: var(--accent-purple);
+      background: var(--glass-bg);
+      padding: 4px 14px;
+      border-radius: 30px;
+      border: 1px solid var(--glass-border);
+      transition: var(--transition);
+      margin-left: auto;
+    }
+    .region-header .tiktok-link:hover {
+      background: rgba(139,92,246,0.15);
+      border-color: var(--accent-purple);
+    }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      transition: var(--transition);
+      backdrop-filter: blur(4px);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-purple), var(--accent-magenta));
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139,92,246,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+    .service-card .number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.3;
+      margin-bottom: 8px;
+    }
+    .service-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .service-card p { color: var(--text-secondary); font-size: 0.95rem; }
+
+    /* ===== ECOSYSTEM ===== */
+    .ecosystem-flow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px 40px;
+      margin: 40px 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .ecosystem-flow .node {
+      background: var(--glass-bg);
+      padding: 16px 32px;
+      border-radius: 60px;
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(4px);
+    }
+    .ecosystem-flow .arrow {
+      color: var(--accent-purple);
+      font-size: 2rem;
+    }
+
+    /* ===== APPLICATION ===== */
+    .app-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 40px;
+      max-width: 720px;
+      margin: 40px auto 0;
+      backdrop-filter: blur(8px);
+    }
+    .app-card .form-group {
+      margin-bottom: 18px;
+    }
+    .app-card label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: var(--text-secondary);
+    }
+    .app-card input, .app-card select, .app-card textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      color: #fff;
+      font-size: 1rem;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .app-card input:focus, .app-card select:focus, .app-card textarea:focus {
+      outline: none;
+      border-color: var(--accent-purple);
+      background: rgba(255,255,255,0.06);
+    }
+    .app-card textarea { resize: vertical; min-height: 100px; }
+    .app-card .btn-primary { width: 100%; margin-top: 8px; }
+
+    .success-msg {
+      background: rgba(139,92,246,0.15);
+      border: 1px solid var(--accent-purple);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 16px;
+      color: #c4b5fd;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-item {
+      border-bottom: 1px solid var(--glass-border);
+      padding: 18px 0;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+    .faq-question .icon {
+      font-size: 1.5rem;
+      transition: var(--transition);
+      color: var(--accent-purple);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+      color: var(--text-secondary);
+    }
+    .faq-answer.open {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 12px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--glass-border);
+      padding: 60px 0 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .logo-img-footer {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+    .footer-brand .brand-text {
+      font-family: 'Manrope', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-brand p { color: var(--text-secondary); margin-top: 8px; max-width: 260px; }
+    .footer-col h4 { font-size: 1rem; margin-bottom: 16px; }
+    .footer-col a { display: block; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px; transition: var(--transition); }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid var(--glass-border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== BACK TO TOP ===== */
+    #backTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-purple), var(--accent-magenta));
+      border: none;
+      color: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 500;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      box-shadow: 0 0 30px rgba(139,92,246,0.3);
+    }
+    #backTop.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    #backTop:hover { transform: scale(1.1); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero-content { grid-template-columns: 1fr; text-align: center; }
+      .hero-left p { margin-left: auto; margin-right: auto; }
+      .hero-btns { justify-content: center; }
+      .hero-trust { justify-content: center; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-right { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .region-header .tiktok-link { margin-left: 0; width: 100%; text-align: center; }
+      .nav-left .logo-img { height: 32px; }
+      .nav-left .brand { font-size: 1.2rem; }
+    }
+    @media (max-width: 480px) {
+      .hero-right { grid-template-columns: 1fr; }
+      .app-card { padding: 24px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .region-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ===== REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" role="status" aria-label="Loading"><div class="loader-ring"></div></div>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <img src="logo.JPG" alt="Quickers Creator Network Logo" class="logo-img" />
+        <div class="brand-text">
+          <span class="brand">QUICKERS</span>
+          <span class="sub">Creator Network</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#regions">Regions</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#apply" class="nav-cta">Join Quickers</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <img src="logo.JPG" alt="Quickers Creator Network Logo" class="logo-img-mobile" />
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#regions">Regions</a>
+    <a href="#services">Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#apply" class="nav-cta">Join Quickers</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="bg-glow"></div><div class="bg-glow2"></div>
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="badge">🌍 GLOBAL TIKTOK CREATOR NETWORK</div>
+        <h1>WHERE CREATORS <br /><span>GO GLOBAL.</span></h1>
+        <p>Quickers Creator Network connects ambitious TikTok creators with global opportunities, professional support, brand partnerships and a network built for growth.</p>
+        <div class="hero-btns">
+          <a href="#apply" class="btn-primary">Become a Creator</a>
+          <a href="#regions" class="btn-secondary">Explore Our Network</a>
+        </div>
+        <div class="hero-trust">
+          <span>Creators</span> <span>•</span> <span>Communities</span> <span>•</span> <span>Brands</span> <span>•</span> <span>Global Opportunities</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card"><img src="https://flagcdn.com/gb.svg" alt="UK" class="flag-img" /><div class="stat">UK</div><div class="label">Europe</div></div>
+        <div class="hero-card"><img src="https://flagcdn.com/us.svg" alt="USA" class="flag-img" /><div class="stat">USA</div><div class="label">North America</div></div>
+        <div class="hero-card"><img src="https://flagcdn.com/de.svg" alt="Germany" class="flag-img" /><div class="stat">DACH</div><div class="label">Germany · Austria · CH</div></div>
+        <div class="hero-card"><img src="https://flagcdn.com/fr.svg" alt="France" class="flag-img" /><div class="stat">France</div><div class="label">Francophone</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container reveal">
+    <h2 class="section-title">CREATORS ARE THE <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">FUTURE OF MEDIA.</span></h2>
+    <p style="max-width:700px;color:var(--text-secondary);font-size:1.1rem;">Quickers Creator Network is built to help creators turn their creativity into sustainable opportunities. We connect creators with a professional network designed around growth, collaboration, audience development and brand opportunities. The goal is to build an ecosystem where creators can grow, collaborate and reach opportunities beyond their local market.</p>
+    <div style="display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;">
+      <div><span style="font-size:2.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">12+</span><br /><span style="color:var(--text-secondary);">Markets</span></div>
+      <div><span style="font-size:2.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">200+</span><br /><span style="color:var(--text-secondary);">Creators</span></div>
+      <div><span style="font-size:2.5rem;font-weight:800;background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">50+</span><br /><span style="color:var(--text-secondary);">Brands</span></div>
+    </div>
+  </section>
+
+  <!-- REGIONS -->
+  <section id="regions" class="container reveal">
+    <h2 class="section-title">ONE NETWORK. <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">GLOBAL REACH.</span></h2>
+    <p class="section-sub">From Europe to North America and beyond, Quickers connects creators across multiple markets.</p>
+
+    <!-- UK & Europe -->
+    <div class="region-header">
+      🇪🇺 UK & Europe <small>18 markets</small>
+      <a href="https://www.tiktok.com/t/ZMSk5qVnJ/" target="_blank" rel="noopener" class="tiktok-link">🔗 Join on TikTok →</a>
+    </div>
+    <div class="region-grid" id="ukEuropeGrid"></div>
+
+    <!-- DACH -->
+    <div class="region-header">
+      🇩🇪 DACH <small>Germany · Austria · Liechtenstein · Switzerland</small>
+      <a href="https://www.tiktok.com/t/ZMSDcuH7C/" target="_blank" rel="noopener" class="tiktok-link">🔗 Join on TikTok →</a>
+    </div>
+    <div class="region-grid" id="dachGrid"></div>
+
+    <!-- North America -->
+    <div class="region-header">
+      🇺🇸 North America <small>USA · Canada</small>
+      <a href="https://www.tiktok.com/t/ZT6Qh2ppw/" target="_blank" rel="noopener" class="tiktok-link">🔗 Join on TikTok →</a>
+    </div>
+    <div class="region-grid" id="naGrid"></div>
+
+    <!-- Francophone -->
+    <div class="region-header">
+      🇫🇷 Francophone <small>France · Belgium · Monaco</small>
+      <a href="https://www.tiktok.com/t/ZMAP38jF6/" target="_blank" rel="noopener" class="tiktok-link">🔗 Join on TikTok →</a>
+    </div>
+    <div class="region-grid" id="francophoneGrid"></div>
+
+    <!-- Italy -->
+    <div class="region-header">
+      🇮🇹 Italy <small>Creator Network</small>
+      <a href="https://www.tiktok.com/t/ZMAqbjFob/" target="_blank" rel="noopener" class="tiktok-link">🔗 Join on TikTok →</a>
+    </div>
+    <div class="region-grid" id="italyGrid"></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="container reveal">
+    <h2 class="section-title">WHAT WE <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">DO</span></h2>
+    <div class="services-grid">
+      <div class="service-card"><div class="number">01</div><h3>Creator Management</h3><p>Professional support designed to help creators grow their presence and opportunities.</p></div>
+      <div class="service-card"><div class="number">02</div><h3>Brand Partnerships</h3><p>Connect creators with relevant campaigns and commercial opportunities.</p></div>
+      <div class="service-card"><div class="number">03</div><h3>Creator Growth</h3><p>Strategies and resources designed to help creators improve their content and audience.</p></div>
+      <div class="service-card"><div class="number">04</div><h3>Global Network</h3><p>Access to an international community of creators across multiple markets.</p></div>
+      <div class="service-card"><div class="number">05</div><h3>Campaign Opportunities</h3><p>Help creators discover and participate in relevant campaigns.</p></div>
+      <div class="service-card"><div class="number">06</div><h3>Creator Support</h3><p>Provide guidance, resources and a professional environment for creators.</p></div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM -->
+  <section class="container reveal">
+    <h2 class="section-title">CREATOR <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ECOSYSTEM</span></h2>
+    <div class="ecosystem-flow">
+      <span class="node">🎬 Creator</span>
+      <span class="arrow">➜</span>
+      <span class="node">🌐 Quickers Network</span>
+      <span class="arrow">➜</span>
+      <span class="node">🏢 Brands</span>
+      <span class="arrow">➜</span>
+      <span class="node">🌍 Global Audiences</span>
+    </div>
+    <p style="color:var(--text-secondary);max-width:700px;margin:0 auto;text-align:center;">Quickers operates as a bridge between creators, brands and audiences — enabling growth, collaboration and opportunity across borders.</p>
+  </section>
+
+  <!-- WHY -->
+  <section class="container reveal">
+    <h2 class="section-title">BUILT <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">DIFFERENT.</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:30px;">
+      <div style="background:var(--glass-bg);padding:24px;border-radius:20px;border:1px solid var(--glass-border);"><h3>🌍 Global by Design</h3><p style="color:var(--text-secondary);font-size:0.95rem;">Creators can connect beyond their local market.</p></div>
+      <div style="background:var(--glass-bg);padding:24px;border-radius:20px;border:1px solid var(--glass-border);"><h3>🎯 Creator First</h3><p style="color:var(--text-secondary);font-size:0.95rem;">The network is designed around creator growth and opportunity.</p></div>
+      <div style="background:var(--glass-bg);padding:24px;border-radius:20px;border:1px solid var(--glass-border);"><h3>🤝 Professional Network</h3><p style="color:var(--text-secondary);font-size:0.95rem;">A structured environment for serious creators.</p></div>
+      <div style="background:var(--glass-bg);padding:24px;border-radius:20px;border:1px solid var(--glass-border);"><h3>🚀 Opportunity Driven</h3><p style="color:var(--text-secondary);font-size:0.95rem;">Focus on meaningful collaborations, campaigns and growth.</p></div>
+    </div>
+  </section>
+
+  <!-- APPLY -->
+  <section id="apply" class="container reveal">
+    <h2 class="section-title" style="text-align:center;">READY TO TAKE YOUR CONTENT <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">FURTHER?</span></h2>
+    <p style="text-align:center;color:var(--text-secondary);max-width:600px;margin:0 auto 20px;">Join a global creator network built for people who are serious about creating, growing and connecting with new opportunities.</p>
+    <div class="app-card" id="appCard">
+      <form id="applyForm" novalidate>
+        <div class="form-group"><label>Full Name</label><input type="text" id="fullName" required /></div>
+        <div class="form-group"><label>Creator Name</label><input type="text" id="creatorName" required /></div>
+        <div class="form-group"><label>Email</label><input type="email" id="email" required /></div>
+        <div class="form-group"><label>Country</label><input type="text" id="country" required /></div>
+        <div class="form-group"><label>TikTok Username</label><input type="text" id="tiktokUser" required /></div>
+        <div class="form-group"><label>TikTok Profile URL</label><input type="url" id="tiktokUrl" /></div>
+        <div class="form-group"><label>Follower Range</label><select id="followers"><option>0-1K</option><option>1K-10K</option><option>10K-50K</option><option>50K-100K</option><option>100K+</option></select></div>
+        <div class="form-group"><label>Content Category</label><input type="text" id="category" placeholder="e.g. Comedy, Fashion, Gaming" /></div>
+        <div class="form-group"><label>Message</label><textarea id="message" placeholder="Tell us about yourself..."></textarea></div>
+        <button type="submit" class="btn-primary">SUBMIT APPLICATION</button>
+      </form>
+      <div id="formSuccess" style="display:none;" class="success-msg">✅ Thank you! Your application has been received. (This is a demo — no data is stored.)</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="container reveal">
+    <h2 class="section-title">FAQ</h2>
+    <div style="max-width:720px;margin-top:20px;">
+      <div class="faq-item"><div class="faq-question">What is Quickers Creator Network? <span class="icon">+</span></div><div class="faq-answer">Quickers is an international TikTok Creator Network that connects creators with growth opportunities, brand partnerships and a global community.</div></div>
+      <div class="faq-item"><div class="faq-question">Who can join Quickers? <span class="icon">+</span></div><div class="faq-answer">Creators from any of our active regions who are passionate about content creation and looking to grow professionally.</div></div>
+      <div class="faq-item"><div class="faq-question">Which countries does Quickers operate in? <span class="icon">+</span></div><div class="faq-answer">We operate across Europe, North America, and select markets — see our Regions section for the full list.</div></div>
+      <div class="faq-item"><div class="faq-question">Do I need a certain number of followers? <span class="icon">+</span></div><div class="faq-answer">We welcome creators at various stages. Follower count is one factor, but we also consider content quality and engagement.</div></div>
+      <div class="faq-item"><div class="faq-question">What type of creators can apply? <span class="icon">+</span></div><div class="faq-answer">All content categories are welcome — from comedy and fashion to gaming and lifestyle.</div></div>
+      <div class="faq-item"><div class="faq-question">How can creators work with brands? <span class="icon">+</span></div><div class="faq-answer">We facilitate partnerships by connecting creators with relevant brand campaigns and opportunities.</div></div>
+      <div class="faq-item"><div class="faq-question">Is joining Quickers free? <span class="icon">+</span></div><div class="faq-answer">Yes, joining Quickers is free for creators. We earn through brand partnerships and campaigns.</div></div>
+      <div class="faq-item"><div class="faq-question">How do I apply? <span class="icon">+</span></div><div class="faq-answer">Simply fill out the application form on this page. Our team will review and get back to you.</div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container reveal">
+    <h2 class="section-title">LET'S BUILD <span style="background:linear-gradient(135deg,var(--accent-purple),var(--accent-magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">WHAT'S NEXT.</span></h2>
+    <div style="display:flex;flex-wrap:wrap;gap:30px;margin-top:20px;">
+      <div><strong>📧 Email</strong><br /><span style="color:var(--text-secondary);">creators@quickers.network</span></div>
+      <div><strong>🎵 TikTok</strong><br /><span style="color:var(--text-secondary);">@quickersnetwork</span></div>
+      <div><strong>📋 Creator Applications</strong><br /><span style="color:var(--text-secondary);">apply@quickers.network</span></div>
+      <div><strong>🤝 Business Partnerships</strong><br /><span style="color:var(--text-secondary);">partners@quickers.network</span></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.JPG" alt="Quickers Creator Network Logo" class="logo-img-footer" />
+          <div class="brand-text">QUICKERS</div>
+          <p>Creator Network</p>
+          <p style="color:var(--text-secondary);font-size:0.9rem;">Connecting creators, brands and opportunities across borders.</p>
+        </div>
+        <div class="footer-col"><h4>Network</h4><a href="#regions">Creators</a><a href="#regions">Regions</a><a href="#regions">Opportunities</a><a href="#apply">Apply</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="#about">About</a><a href="#services">Services</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+        <div class="footer-col"><h4>Social</h4><a href="#">TikTok</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Quickers Creator Network. All rights reserved.</span><span><a href="#" style="margin-right:16px;">Privacy Policy</a><a href="#">Terms & Conditions</a></span></div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backTop" aria-label="Back to top">↑</button>
+
+  <script>
+    // ===== JAVASCRIPT =====
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Loader
+      setTimeout(() => document.getElementById('loader').classList.add('hidden'), 500);
+
+      // Nav
+      const nav = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      });
+
+      // Hamburger
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      hamburger.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isOpen);
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+      });
+
+      // Scroll reveal
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => observer.observe(el));
+
+      // Back to top
+      const backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', () => {
+        backTop.classList.toggle('visible', window.scrollY > 400);
+      });
+      backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // FAQ accordion
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const q = item.querySelector('.faq-question');
+        const a = item.querySelector('.faq-answer');
+        const icon = q.querySelector('.icon');
+        q.addEventListener('click', () => {
+          const isOpen = a.classList.toggle('open');
+          icon.textContent = isOpen ? '−' : '+';
+          if (isOpen) a.style.maxHeight = a.scrollHeight + 'px';
+          else a.style.maxHeight = '0';
+        });
+      });
+
+      // Form validation + demo success
+      const form = document.getElementById('applyForm');
+      const success = document.getElementById('formSuccess');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        let valid = true;
+        inputs.forEach(inp => {
+          if (!inp.value.trim()) { valid = false; inp.style.borderColor = '#f87171'; } else inp.style.borderColor = '';
+        });
+        if (!valid) return;
+        form.style.display = 'none';
+        success.style.display = 'block';
+        setTimeout(() => {
+          form.style.display = 'block';
+          success.style.display = 'none';
+          form.reset();
+        }, 5000);
+      });
+
+      // Active nav highlight
+      const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
+      window.addEventListener('scroll', () => {
+        let current = '';
+        document.querySelectorAll('section[id]').forEach(section => {
+          const top = section.offsetTop - 120;
+          if (window.scrollY >= top) current = section.getAttribute('id');
+        });
+        navLinks.forEach(link => {
+          link.style.color = link.getAttribute('href') === '#' + current ? '#fff' : '';
+        });
+      });
+
+      // Cursor interaction
+      if (window.innerWidth > 768) {
+        document.addEventListener('mousemove', (e) => {
+          const x = (e.clientX / window.innerWidth) * 20;
+          const y = (e.clientY / window.innerHeight) * 20;
+          document.querySelector('.bg-glow').style.transform = `translate(${x}px, ${y}px)`;
+        });
+      }
+
+      // ----- REGION DATA (flag codes + names) -----
+      const regionData = {
+        ukEurope: [
+          { code: 'gb', name: 'United Kingdom' },
+          { code: 'ie', name: 'Ireland' },
+          { code: 'ee', name: 'Estonia' },
+          { code: 'mk', name: 'North Macedonia' },
+          { code: 'je', name: 'Jersey' },
+          { code: 'ba', name: 'Bosnia & Herzegovina' },
+          { code: 'im', name: 'Isle of Man' },
+          { code: 'mt', name: 'Malta' },
+          { code: 'gr', name: 'Greece' },
+          { code: 'me', name: 'Montenegro' },
+          { code: 'al', name: 'Albania' },
+          { code: 'fo', name: 'Faroe Islands' },
+          { code: 'lt', name: 'Lithuania' },
+          { code: 'gi', name: 'Gibraltar' },
+          { code: 'rs', name: 'Serbia' },
+          { code: 'gg', name: 'Guernsey' },
+          { code: 'lv', name: 'Latvia' },
+          { code: 'cd', name: 'DR Congo' }
+        ],
+        dach: [
+          { code: 'de', name: 'Germany' },
+          { code: 'at', name: 'Austria' },
+          { code: 'li', name: 'Liechtenstein' },
+          { code: 'ch', name: 'Switzerland' }
+        ],
+        na: [
+          { code: 'us', name: 'United States' },
+          { code: 'ca', name: 'Canada' }
+        ],
+        francophone: [
+          { code: 'fr', name: 'France' },
+          { code: 'be', name: 'Belgium' },
+          { code: 'mc', name: 'Monaco' }
+        ],
+        italy: [
+          { code: 'it', name: 'Italy' }
+        ]
+      };
+
+      // Render function
+      function renderRegion(gridId, data, regionLink) {
+        const grid = document.getElementById(gridId);
+        if (!grid) return;
+        grid.innerHTML = data.map(item => `
+          <a href="${regionLink}" target="_blank" rel="noopener" class="region-card">
+            <img src="https://flagcdn.com/${item.code}.svg" alt="${item.name} flag" class="flag-img" loading="lazy" />
+            <div class="name">${item.name}</div>
+            <div class="status">Active</div>
+          </a>
+        `).join('');
+      }
+
+      // Render all regions with their respective TikTok links
+      renderRegion('ukEuropeGrid', regionData.ukEurope, 'https://www.tiktok.com/t/ZMSk5qVnJ/');
+      renderRegion('dachGrid', regionData.dach, 'https://www.tiktok.com/t/ZMSDcuH7C/');
+      renderRegion('naGrid', regionData.na, 'https://www.tiktok.com/t/ZT6Qh2ppw/');
+      renderRegion('francophoneGrid', regionData.francophone, 'https://www.tiktok.com/t/ZMAP38jF6/');
+      renderRegion('italyGrid', regionData.italy, 'https://www.tiktok.com/t/ZMAqbjFob/');
+
+      console.log('🚀 Quickers Creator Network — premium global network.');
+    });
+  </script>
+</body>
+</html>
